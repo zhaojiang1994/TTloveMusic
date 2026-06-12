@@ -31,7 +31,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/your-username/ttplayer-nanling.git
+git clone https://github.com/zhaojiang1994/TTloveMusic.git
 cd ttplayer-nanling
 
 # 用任意 HTTP 服务器托管
@@ -46,7 +46,10 @@ npx serve .
 
 ### 安卓版
 使用根目录的js,css,mg.html，放入安卓打包目录中,注意！apk省电行为要设置为无限制，不然会导致后台无法播放
+```bash
 npm run build
+```
+
 
 ### Electron 桌面版
 
@@ -63,7 +66,17 @@ npm run build     # 打包为 exe / dmg
    - **HTTP 目录**：输入文件服务器的根 URL（需开启目录列表）                http://192.xx.xx.xx/mm/
    - **AList**：选择协议为 `alist`，输入 AList 地址、用户名和密码          http://192.xx.xx.xx/mm/
    
-   
+### 配置歌词服务
+
+1. 点击顶栏 🎤 **歌词服务** 按钮
+2. 选择歌词提供平台（现在使用的,）
+3. 配置 API 地址（可使用公共 API 或自行部署）
+
+> 默认网易云 API：`http://fn.xiaom.xxxx:3066`
+> 可替换为自行部署的 [NeteaseCloudMusicApi服务仓库](https://github.com/neteasecloudmusicapienhanced/api-enhanced)
+
+>docker方式部署，这是一个开源项目，目前只支持一种歌词方案
+
 ```yaml
 services:
   alist:
@@ -73,25 +86,15 @@ services:
     ports:
       - "5244:5244"
     volumes:
-      - /vol1/1000/app/docker/alist/data:/opt/alist/data
+      - 你的data目录:/opt/alist/data
     environment:
       - TZ=Asia/Shanghai
 ```
 
-### 配置歌词服务
-
-1. 点击顶栏 🎤 **歌词服务** 按钮
-2. 选择歌词提供平台（现在使用的,）
-3. 配置 API 地址（可使用公共 API 或自行部署）
-
-> 默认网易云 API：`http://fn.xiaom.xxxx:3066`
-> 可替换为自行部署的 [NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)
-
-点击顶栏 🎤 按钮，修改 API 地址即可。常见的自部署选项：，目前只支持一种歌词方案
-- [NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)
-
-
+>这里是alist [alist开源仓库](https://github.com/AlistGo/alist)
 ```yaml
+
+
 version: '3.8'
 
 services:
