@@ -62,8 +62,9 @@
             var isFS = !!(document.fullscreenElement || document.webkitFullscreenElement ||
                 document.querySelector('._fsMode') || document.querySelector('.is-fullscreen'));
 
-            var targetW = isFS ? 700 : 800;
-            var targetH = isFS ? 1144 : 720;
+            var targetW = Math.round(w);
+            var targetH = Math.round(h);
+
 
             // 尺寸没变就不重置画布（避免无效的 clearRect + GPU 重分配）
             if (c.width === targetW && c.height === targetH) return false;

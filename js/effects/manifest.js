@@ -17,4 +17,5 @@ window.EFFECT_MANIFEST = [
     { id: 'nebula_vortex', file: 'nebula_vortex.js', label: '🌌 星云漩涡' },
     { id: 'memphis_pop', file: 'memphis_pop.js', label: '🎨 莫兰迪波普几何' },
     { id: 'pixel_bounce_race', file: 'pixel_bounce_race.js', label: '🌲 静谧森林' },
+    { id: 'cyber_snake', file: 'fx-snake.js', label: '🌲 贪吃蛇' },
 ];
