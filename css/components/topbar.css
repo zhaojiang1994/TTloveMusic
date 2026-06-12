@@ -1,0 +1,153 @@
+/* ========== 顶部栏样式 ========== */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 10px;
+    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+    min-height: 24px;
+}
+
+.logo {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.logo i {
+    margin-right: 5px;
+    font-size: 0.8rem;
+}
+
+/* 右侧操作区（皮肤 + 全屏按钮水平排列） */
+.theme-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* 主题切换按钮组 */
+.style-switch {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.style-label {
+    font-size: 0.65rem;
+    opacity: 0.7;
+}
+
+.style-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 3px 10px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 0.65rem;
+    transition: 0.2s;
+}
+
+.style-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Electron 标题栏可拖动 */
+#titleBar {
+    -webkit-app-region: drag;
+}
+
+#titleBar button,
+#titleBar select {
+    -webkit-app-region: no-drag;
+}
+
+/* 主题下拉选择器 */
+.theme-select {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 3px 8px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 0.65rem;
+    color: inherit;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: 0.2s;
+    max-width: 130px;
+}
+
+.theme-select:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.theme-select option {
+    background: #1a1a2a;
+    color: #ccc;
+}
+
+/* 清除缓存按钮 */
+.clear-cache-title-btn {
+    background: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: #aaa;
+    opacity: 0.6;
+    transition: 0.12s;
+    margin-left: 2px;
+    border-radius: 4px;
+}
+
+.clear-cache-title-btn:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e74c3c;
+}
+
+/* 窗口控制按钮 */
+.window-controls {
+    display: flex;
+    gap: 1px;
+    margin-left: 8px;
+    align-items: center;
+}
+
+.win-btn {
+    background: transparent;
+    border: none;
+    width: 28px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5rem;
+    color: inherit;
+    opacity: 0.5;
+    transition: 0.12s;
+    border-radius: 0;
+}
+
+.win-btn:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.win-min { font-size: 0.65rem; }
+.win-max { font-size: 0.5rem; }
+
+.win-close:hover {
+    background: #e74c3c !important;
+    color: #fff !important;
+    opacity: 1;
+}
+
+/* 去掉装饰文字，避免和右侧按钮重叠 */

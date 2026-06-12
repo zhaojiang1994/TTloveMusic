@@ -1,0 +1,19 @@
+/* ========== CSS 变量 ========== */
+:root {
+    /* 默认主题变量（会被主题覆盖） */
+    --bg-body: #0a0e1a;
+    --bg-app: #0d1a2e;
+    --bg-panel: #0a1222;
+    --border-color: #2a4a7a;
+    --text-primary: #c8ddff;
+    --text-secondary: #88aaff;
+    --text-artist: #88ccff;
+    --text-song: #c8ddff;
+    --accent-color: #88ccff;
+    --accent-active: #ffcc66;
+    --hover-bg: #1a2a4a;
+    --active-bg: #1a2a4a;
+    --progress-fill: #88ccff;      /* 已播放颜色，各主题覆盖 */
+    --progress-buffer: rgba(136,204,255,0.25); /* 已缓冲颜色（同色系半透明） */
+    --progress-bg: rgba(0,0,0,0.25);           /* 未缓冲底色 */
+}

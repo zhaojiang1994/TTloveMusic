@@ -1,0 +1,63 @@
+/* ========== 暖橙 ========== */
+body { background: #8a3a10; }
+.ttplayer-app { background: linear-gradient(135deg, #f58a43, #e07830); }
+.logo { color: #fff; }
+.theme-select { background: #e07830; color: #fff; }
+.theme-select option { background: #fff; color:#333; }
+.win-btn { color: #fff; } .win-btn:hover { background: #d06820; }
+.playlist-panel { background: #f58a43; }
+.view-mode-btn { color: #fff; opacity: 0.7; }
+.view-mode-btn.active { background: #fff; color: #e06820; opacity: 1; }
+.search-area { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); }
+.search-area input { color: #fff; }
+.list-container { background: #f58a43; }
+.song-item { color: #fff; } .song-item:hover { background: rgba(255,255,255,0.1); }
+.song-item.active { background: rgba(255,255,255,0.15); border-left: 2px solid #fff; }
+.artist-text { color: rgba(255,255,255,0.6); }
+.song-item:hover .artist-text { color: rgba(255,255,255,0.8); }
+.song-item.active .artist-text { color: #fff; }
+.song-index { color: rgba(255,255,255,0.4); } .song-duration { color: rgba(255,255,255,0.4); }
+.lyrics-container .font-control { color: #5a3a2a; text-shadow: 0 0 4px rgba(255,255,255,0.3); }
+.now-playing-card { background: rgba(255,255,255,0.1); color: #fff; }
+.song-title { color: #fff; } .song-artist { color: rgba(255,255,255,0.6); }
+.audio-controls button { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+.play-big { background: #fff !important; color: #e06820 !important; }
+#progressBar { background: rgba(255,255,255,0.2); }
+#progressBar::-webkit-slider-thumb { background: #fff; }
+.volume-box input::-webkit-slider-thumb { background: #fff; }
+.lyrics-container { background: rgba(0,0,0,0.05); }
+.lyrics-box { color: #fff; } .lyrics-line { color: rgba(255,255,255,0.6); }
+.lyrics-line:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.lyrics-line.active { color: #fff4d0; font-weight: bold; text-shadow: 0 0 8px rgba(255,255,255,0.4); }
+.effect-bar { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; }
+.effect-bar select { background: #e07830; color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+.folder-navigation-bar { border-bottom: 1px solid rgba(255,255,255,0.15); }
+.folder-path-indicator { color: rgba(255,255,255,0.6); }
+.back-item { color: #fff; } .back-item:hover { background: rgba(255,255,255,0.1); }
+.clear-cache-btn { color: rgba(255,255,255,0.6); } .clear-cache-btn:hover { background: rgba(255,255,255,0.1); }
+.add-source-btn { color: #fff; }
+.folder-grid-wrapper { background: transparent; }
+.folder-icon-wrap { color: #fff; }
+.source-divider-line { background: rgba(255,255,255,0.15); }
+.source-divider-label { color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.05); }
+.source-name { color: #fff; } .source-date-display { color: rgba(255,255,255,0.4); }
+.source-divider-delete { color: rgba(255,0,0,0.6); }
+.pagination-bar { border-top: 1px solid rgba(255,255,255,0.15); }
+.page-btn { border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.5); }
+.page-btn:hover:not(:disabled) { background: rgba(255,255,255,0.1); color: #fff; }
+.page-info { color: rgba(255,255,255,0.4); }
+.page-size-select { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; }
+.empty-list { color: rgba(255,255,255,0.5); } .empty-list i { opacity: 0.3; }
+.add-source-overlay { background: rgba(60,30,10,0.5); }
+.add-source-dialog { background: #e88040; border: 1px solid rgba(255,255,255,0.2); color: #fff; }
+.dialog-title { color: #fff; } .dialog-body label { color: rgba(255,255,255,0.7); }
+.dialog-body input { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2); color: #fff; }
+.dialog-hint { color: rgba(255,255,255,0.4); }
+.dialog-btn.cancel { background: rgba(255,255,255,0.1); color: #fff; }
+.dialog-btn.confirm { background: #fff; color: #e06820; }
+::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); }
+.folder-name-scroll { color: #fff; }
+.folder-item.grid-box .folder-name-scroll { color: #fff; }
+:root { --progress-fill: #ffffff; --progress-buffer: rgba(255,255,255,0.25); --progress-bg: rgba(0,0,0,0.25); }
+

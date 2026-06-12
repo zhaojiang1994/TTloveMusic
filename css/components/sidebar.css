@@ -1,0 +1,124 @@
+/* ========== 侧边栏样式 ========== */
+.playlist-header {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 视图切换按钮 */
+.view-mode {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.view-mode-btn {
+    background: transparent;
+    border: none;
+    padding: 3px 7px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 0.65rem;
+    transition: 0.2s;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.view-mode-btn.active {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* 全屏按钮 */
+.fullscreen-btn {
+    background: transparent;
+    border: none;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    color: #999;
+    opacity: 0.5;
+    transition: 0.15s;
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.fullscreen-btn:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 全屏状态：左侧列表 */
+.playlist-panel.is-fullscreen {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    z-index: 1000;
+    border-radius: 0;
+}
+
+.playlist-panel.is-fullscreen .search-area {
+    display: none;
+}
+
+.playlist-panel.is-fullscreen .playlist-header {
+    padding: 10px 12px;
+}
+
+.playlist-panel.is-fullscreen .list-container {
+    padding: 0 4px;
+}
+
+/* 搜索框 */
+.search-area {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 4px 10px;
+    margin-bottom: 8px;
+    transition: background 0.2s;
+}
+
+.search-area:focus-within {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 16px;  /* 保持椭圆，聚焦不变方形 */
+}
+
+.search-area i {
+    opacity: 0.35;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+}
+
+.search-area input {
+    background: transparent;
+    border: none;
+    padding: 4px 6px;
+    width: 100%;
+    outline: none;
+    font-size: 0.7rem;
+    border-radius: 0;  /* 防止浏览器默认圆角 */
+}
+
+.search-area input:focus {
+    border-radius: 0;  /* 聚焦时也不变 */
+}
+
+/* 列表容器 */
+.list-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+    min-height: 0;
+}
+
+/* 字体控制（已移至歌词区域，见 lyrics.css） */

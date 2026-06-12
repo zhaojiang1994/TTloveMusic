@@ -1,0 +1,120 @@
+/* playlist.css - 超紧凑版 */
+
+/* 歌曲项 */
+.song-item {
+    padding: 2px 4px;
+    margin: 0;
+    cursor: pointer;
+    transition: background 0.08s ease;
+    display: flex;
+    align-items: center;
+    min-height: 26px;
+}
+
+.song-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* 收藏图标 */
+.fav-icon {
+    flex-shrink: 0;
+    width: 16px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.6rem;
+    opacity: 0.4;
+    transition: 0.15s;
+}
+
+.fav-icon:hover { opacity: 1; }
+.fav-icon .fas.fa-heart { color: #e74c3c; opacity: 1; }
+
+/* 歌曲显示区域 */
+.song-display {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    min-height: 26px;
+}
+
+/* 序号 */
+.song-index {
+    font-size: 10px;
+    color: #888;
+    min-width: 22px;
+    flex-shrink: 0;
+    text-align: left;
+    font-variant-numeric: tabular-nums;
+}
+
+/* 歌手名容器 */
+.artist-wrapper {
+    width: 60px;
+    flex-shrink: 0;
+}
+
+/* 歌手名跑马灯 */
+.artist-marquee {
+    overflow-x: hidden;
+    white-space: nowrap;
+    line-height: 1.2;
+    pointer-events: auto !important;
+}
+
+/* CSS 跑马灯动画（替代 JS setInterval） */
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+.artist-marquee.marquee-active .artist-text {
+    animation-name: marquee-scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.artist-marquee.marquee-active:hover .artist-text {
+    animation-play-state: paused;
+}
+
+/* 歌手名文字 */
+.artist-text {
+    font-size: 10px;
+    display: inline-block;
+    white-space: nowrap;
+    color: #777;
+}
+
+/* 歌名 */
+.song-name {
+    font-size: 10px;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 时长 */
+.song-duration {
+    font-size: 10px;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    min-width: 34px;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+/* 高亮 */
+.song-item.active {
+    border-left-width: 2px;
+    border-left-style: solid;
+    background: rgba(0, 120, 215, 0.1);
+}
+
+/* 空列表（在 folder.css 中统一定义，此处占位避免缺失） */
+
+/* 全屏 + 电子模式：列表容器占满 */
+.playlist-panel.is-fullscreen .list-container {
+    flex: 1;
+    min-height: 0;
+}

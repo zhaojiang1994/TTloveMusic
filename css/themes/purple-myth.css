@@ -1,0 +1,440 @@
+/* ========== 紫晶神话 · TTPlayer 经典紫晶皮肤 ========== */
+/* 暗紫 + 藏蓝配色，低饱和度、高对比，XP 时代玻璃质感 */
+
+body {
+    background: #1a1a2e;
+}
+
+.ttplayer-app {
+    background: linear-gradient(145deg, #2a2a40 0%, #222238 40%, #1e1e32 100%);
+    /* subtle diagonal texture via repeating gradient */
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 4px,
+        rgba(255, 255, 255, 0.012) 4px,
+        rgba(255, 255, 255, 0.012) 5px
+    );
+}
+
+/* ===== 顶部栏 ===== */
+.logo {
+    color: #ffd700;  /* TTPlayer 经典黄 */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+.theme-select {
+    background: #353550;
+    color: #b8b8d0;
+    border: 1px solid #4a4a6a;
+}
+
+.theme-select option {
+    background: #2a2a40;
+    color: #d0d0e8;
+}
+
+.win-btn {
+    color: #8888b0;
+}
+
+.win-btn:hover {
+    background: #4a4a6a;
+    color: #d0d0f0;
+}
+
+.clear-cache-title-btn {
+    color: #8888b0;
+    opacity: 0.5;
+}
+
+.clear-cache-title-btn:hover {
+    opacity: 1;
+    color: #ff6b6b;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.style-label {
+    color: #8888b0;
+    opacity: 0.6;
+}
+
+.fullscreen-btn {
+    color: #a8a8d0;
+}
+
+.fullscreen-btn:hover {
+    color: #ffffff;
+    background: #4a4a6a;
+}
+
+/* ===== 播放列表面板 ===== */
+.playlist-panel {
+    background: #1e1e30;
+    border-right-color: #2a2a48;
+}
+
+.view-mode-btn {
+    color: #b8b8e0;
+    background: transparent;
+    border: none;
+}
+
+.view-mode-btn.active {
+    background: #6b8cff;
+    color: #ffffff;
+    box-shadow: 0 0 6px rgba(107, 140, 255, 0.3);
+}
+
+.search-area {
+    background: #252540;
+    border: 1px solid #3a3a5a;
+    border-radius: 4px;
+}
+
+.search-area input {
+    color: #e8e8f0;
+}
+
+.add-music button {
+    background: #353550;
+    color: #b8b8d0;
+    border: 1px solid #4a4a6a;
+}
+
+.list-container {
+    background: #1e1e30;
+}
+
+/* ===== 歌曲列表 ===== */
+.song-item {
+    color: #d8d8ec;
+    border-bottom: 1px solid rgba(60, 60, 90, 0.2);
+}
+
+.song-item:hover {
+    background: #2a2a48;
+}
+
+.song-item.active {
+    background: #2a2a48;
+    border-left: 3px solid #6b8cff;
+}
+
+.artist-text {
+    color: #8888b0;
+}
+
+.song-item:hover .artist-text {
+    color: #b0b0d8;
+}
+
+.song-item.active .artist-text {
+    color: #8ab4ff;
+}
+
+.song-name-display {
+    color: #e8e8f0;
+}
+
+.artist-scroll::-webkit-scrollbar-track {
+    background: #2a2a48;
+}
+
+.artist-scroll::-webkit-scrollbar-thumb {
+    background: #6b8cff;
+}
+
+.folder-item {
+    color: #d8d8ec;
+}
+
+.folder-item:hover {
+    background: #2a2a48;
+}
+
+/* .font-control 已移至歌词区域，见 lyrics.css */
+.lyrics-container .font-control {
+    color: #b8b8d0;
+}
+
+/* ===== 当前播放卡片 ===== */
+.now-playing-card {
+    background: linear-gradient(135deg, #252540, #222238);
+    border: 1px solid #3a3a5a;
+    color: #c8c8e0;
+    border-radius: 10px;
+}
+
+.song-title {
+    color: #f0f0ff;
+}
+
+.song-artist {
+    color: #8ab4ff;
+}
+
+/* ===== 播放控制按钮 — XP 玻璃质感 ===== */
+.audio-controls button {
+    background: linear-gradient(135deg, #5a5a8a, #3a3a60);
+    color: #f0f0ff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.audio-controls button:hover {
+    background: linear-gradient(135deg, #6a6a9a, #4a4a70);
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(107, 140, 255, 0.25);
+}
+
+.play-big {
+    background: linear-gradient(135deg, #7a7aff, #5a5ad0) !important;
+    color: #ffffff !important;
+    width: 36px !important;
+    height: 36px !important;
+    box-shadow: 0 2px 8px rgba(107, 140, 255, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ===== 进度条 ===== */
+#progressBar {
+    background: transparent;
+    height: 4px;
+    border-radius: 2px;
+}
+
+#progressBar::-webkit-slider-thumb {
+    background: #6b8cff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(107, 140, 255, 0.5);
+}
+
+.volume-box input::-webkit-slider-thumb {
+    background: #6b8cff;
+    box-shadow: 0 0 6px rgba(107, 140, 255, 0.5);
+}
+
+/* ===== 歌词 ===== */
+.lyrics-container {
+    background: #1e1e30;
+}
+
+.lyrics-scroll-wrap {
+    background: #1e1e30;
+}
+
+.lyrics-box {
+    color: #e8e8f0;
+}
+
+.lyrics-line {
+    color: #8888b0;
+    transition: color 0.2s;
+}
+
+.lyrics-line:hover {
+    background: #2a2a48;
+    color: #d0d0ec;
+}
+
+.lyrics-line.active {
+    color: #8ab4ff;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(107, 140, 255, 0.3);
+}
+
+.effect-bar {
+    background: #252540;
+    border: 1px solid #3a3a5a;
+    color: #b8b8d0;
+}
+
+.effect-bar select {
+    background: #353550;
+    color: #d0d0ec;
+    border: 1px solid #4a4a6a;
+}
+
+/* ===== 文件夹视图 ===== */
+.folder-navigation-bar {
+    border-bottom: 1px solid #2a2a48;
+}
+
+.folder-path-indicator {
+    color: #7878a0;
+}
+
+.back-item {
+    color: #6b8cff;
+}
+
+.back-item:hover {
+    background: #2a2a48;
+}
+
+.clear-cache-btn {
+    color: #7878a0;
+}
+
+.clear-cache-btn:hover {
+    background: #2a2a48;
+}
+
+.add-source-btn {
+    color: #6b8cff;
+}
+
+.folder-grid-wrapper {
+    background: transparent;
+}
+
+.folder-icon-wrap {
+    color: #ffd700;
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.2);
+}
+
+.source-divider-line {
+    background: rgba(100, 100, 160, 0.2);
+}
+
+.source-divider-label {
+    color: #8888b0;
+    background: rgba(40, 40, 80, 0.3);
+}
+
+.source-name {
+    color: #c8c8e0;
+}
+
+.source-date-display {
+    color: #606080;
+}
+
+.source-divider-delete {
+    color: #e74c3c;
+}
+
+.pagination-bar {
+    border-top: 1px solid #2a2a48;
+}
+
+.page-btn {
+    border: 1px solid #3a3a5a;
+    color: #7878a0;
+    background: transparent;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: #2a2a48;
+    color: #c8c8e0;
+}
+
+.page-btn:disabled {
+    opacity: 0.25;
+}
+
+.page-info {
+    color: #606080;
+}
+
+.page-size-select {
+    background: #252540;
+    border: 1px solid #3a3a5a;
+    color: #8888b0;
+}
+
+.song-index {
+    color: #606080;
+}
+
+.song-duration {
+    color: #606080;
+}
+
+.empty-list {
+    color: #7878a0;
+}
+
+.empty-list i {
+    opacity: 0.25;
+}
+
+/* ===== 弹框 ===== */
+.add-source-overlay {
+    background: rgba(10, 10, 26, 0.75);
+}
+
+.add-source-dialog {
+    background: #2a2a44;
+    border: 1px solid #4a4a6a;
+    color: #d8d8ec;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.dialog-title {
+    color: #8ab4ff;
+    border-bottom: 1px solid #3a3a5a;
+    padding-bottom: 8px;
+}
+
+.dialog-body label {
+    color: #8888b0;
+}
+
+.dialog-body input {
+    background: #1e1e34;
+    border: 1px solid #3a3a5a;
+    color: #e8e8f0;
+    border-radius: 4px;
+}
+
+.dialog-hint {
+    color: #606080;
+}
+
+.dialog-btn.cancel {
+    background: #353550;
+    color: #8888b0;
+    border: 1px solid #4a4a6a;
+    border-radius: 4px;
+}
+
+.dialog-btn.confirm {
+    background: linear-gradient(135deg, #6b8cff, #5a7aee);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(107, 140, 255, 0.3);
+}
+
+/* ===== 滚动条 ===== */
+::-webkit-scrollbar-track {
+    background: #1e1e30;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3a3a5a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a4a6a;
+}
+
+.folder-name-scroll {
+    color: #c8c8e0;
+}
+
+.folder-item.grid-box .folder-name-scroll {
+    color: #c8c8e0;
+}
+
+/* ===== 主题变量 ===== */
+:root { --progress-fill: #6b8cff; --progress-buffer: rgba(107,140,255,0.25); --progress-bg: rgba(0,0,0,0.25); }

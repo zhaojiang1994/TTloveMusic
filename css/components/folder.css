@@ -1,0 +1,527 @@
+/* folder.css - 适配模板的紧凑版 */
+
+.folder-view-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+}
+
+/* 顶部路径栏 - 紧凑 */
+.folder-navigation-bar {
+    display: flex;
+    align-items: center;
+    padding: 2px 6px;
+    height: 24px;
+    font-size: 11px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+/* 路径指示器 */
+.folder-path-indicator {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #aaa;
+    font-size: 10px;
+}
+
+/* 列表网格区 - 紧凑网格 */
+.folder-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+    gap: 0px;
+    padding: 1px;
+    overflow-y: auto;
+    align-content: flex-start;
+}
+
+/* 文件夹项 - 紧凑（图标左固定，名字溢出滚动） */
+.folder-item.grid-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 22px;
+    padding: 0 5px;
+    cursor: pointer;
+    border: none !important;
+    border-radius: 2px;
+    transition: background 0.08s;
+    gap: 3px;
+    overflow: hidden;
+    font-size: 10px;
+}
+
+.folder-item.grid-box .folder-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 12px;
+    font-size: 9px;
+    color: #e8c547;
+}
+
+.folder-item.grid-box .folder-name-marquee {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    line-height: 22px;
+}
+
+.folder-name-marquee .folder-name-scroll {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 4px;
+    font-size: 10px;
+    color: #ccc;
+}
+
+.folder-name-marquee .folder-name-scroll.marquee-active {
+    animation: folder-marquee linear infinite;
+}
+
+@keyframes folder-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.folder-item.grid-box:hover {
+    background: rgba(0, 120, 215, 0.12);
+}
+
+.folder-item.grid-box.checked {
+    background: rgba(0, 120, 215, 0.2) !important;
+}
+
+/* 文件夹勾选框 */
+.folder-checkbox {
+    flex-shrink: 0;
+    width: 14px;
+    text-align: center;
+    font-size: 10px;
+    color: #888;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.folder-checkbox .fas.fa-check-square {
+    color: var(--progress-fill, #88ccff);
+}
+
+/* 返回按钮 */
+.folder-item.back-item {
+    font-size: 10px;
+    padding: 0 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.folder-item.back-item:hover {
+    background: rgba(0, 120, 215, 0.12);
+    border-radius: 2px;
+}
+
+/* 图标 */
+.folder-icon-wrap {
+    font-size: 10px;
+    width: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+    color: #e8c547;
+    flex-shrink: 0;
+}
+
+/* 名字 */
+.folder-name-text {
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 24px;
+}
+
+/* 来源分隔线 - 紧凑（带地址和日期） */
+.source-divider {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 6px 2px 6px;
+    cursor: default;
+    user-select: none;
+}
+
+.source-divider-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(200, 200, 200, 0.25);
+}
+
+.source-divider-label {
+    font-size: 9px;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: rgba(128, 128, 128, 0.08);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1;
+}
+
+.source-divider-label i {
+    font-size: 9px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.source-name {
+    font-weight: 500;
+    color: #bbb;
+    flex-shrink: 0;
+}
+
+.source-date-display {
+    font-size: 8px;
+    color: #666;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: 0 2px;
+}
+
+.source-divider-delete {
+    cursor: pointer;
+    color: #e74c3c;
+    opacity: 0.4;
+    transition: opacity 0.1s;
+    flex-shrink: 0;
+    font-size: 9px;
+}
+
+.source-divider-delete:hover {
+    opacity: 1;
+}
+
+/* 刷新按钮 */
+.clear-cache-btn {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    transition: opacity 0.2s;
+    font-size: 10px;
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+
+.clear-cache-btn:hover {
+    background: rgba(128, 128, 128, 0.1);
+}
+
+/* 添加按钮 */
+.add-source-btn {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    transition: opacity 0.2s;
+    color: #4da6ff;
+    font-size: 10px;
+    margin-left: auto;
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+
+.add-source-btn:hover {
+    background: rgba(77, 166, 255, 0.15);
+}
+
+/* 同步旋转动画 */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-glow {
+    0%   { box-shadow: 0 0 2px rgba(77, 166, 255, 0.3); }
+    50%  { box-shadow: 0 0 10px rgba(77, 166, 255, 0.7); }
+    100% { box-shadow: 0 0 2px rgba(77, 166, 255, 0.3); }
+}
+
+.clear-cache-btn.is-refreshing {
+    color: #4da6ff;
+    animation: pulse-glow 1.2s ease-in-out infinite;
+    border-radius: 3px;
+}
+
+.clear-cache-btn.is-refreshing i {
+    animation: spin 0.8s linear infinite;
+    color: #4da6ff;
+}
+
+/* 禁止文字选中 */
+.folder-view-container,
+.song-item,
+.clear-cache-btn,
+.add-source-btn,
+.source-divider-delete {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* 分页栏 - 紧凑 */
+.pagination-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 2px 4px;
+    border-top: 1px solid rgba(128, 128, 128, 0.15);
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.page-btn {
+    background: none;
+    border: 1px solid rgba(128, 128, 128, 0.18);
+    color: rgba(128, 128, 128, 0.55);
+    padding: 1px 6px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 9px;
+    transition: background 0.1s, color 0.1s;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: rgba(0, 120, 215, 0.12);
+    color: rgba(180, 200, 220, 0.8);
+}
+
+.page-btn:disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+
+.page-info {
+    font-size: 9px;
+    color: rgba(128, 128, 128, 0.5);
+    font-variant-numeric: tabular-nums;
+}
+
+/* 每页数量选择器 */
+.page-size-control {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding-left: 6px;
+    border-left: 1px solid rgba(128, 128, 128, 0.15);
+    margin-left: 2px;
+}
+
+.page-size-label {
+    font-size: 9px;
+    color: rgba(128, 128, 128, 0.45);
+}
+
+.page-size-select {
+    background: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.18);
+    color: rgba(128, 128, 128, 0.55);
+    border-radius: 2px;
+    padding: 0 3px;
+    font-size: 9px;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: center;
+    min-width: 36px;
+    transition: color 0.1s, border-color 0.1s;
+}
+
+.page-size-select:hover,
+.page-size-select:focus {
+    color: rgba(180, 200, 220, 0.8);
+    border-color: rgba(128, 128, 128, 0.35);
+}
+
+.page-size-select option {
+    background: #1a1a2a;
+    color: #aaa;
+}
+
+/* 歌曲列表包装器（flex列，让空列表可居中） */
+.folder-songs-wrapper .fav-icon { display: none; }
+
+.fav-songs-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.folder-songs-wrapper,
+.normal-songs-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 空列表（居中大图标） */
+.empty-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    gap: 14px;
+}
+
+.empty-list i {
+    font-size: 36px;
+    opacity: 0.25;
+    display: block;
+}
+
+.empty-list .empty-message {
+    font-size: 11px;
+    opacity: 0.7;
+    line-height: 1.5;
+}
+
+/* 添加来源对话框 */
+.add-source-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.add-source-dialog {
+    background: #2a2a2a;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 8px;
+    padding: 16px;
+    min-width: 300px;
+    max-width: 90%;
+    color: #e0e0e0;
+}
+
+.dialog-title {
+    font-size: 13px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #e8c547;
+}
+
+.dialog-body label {
+    font-size: 11px;
+    color: #aaa;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.dialog-body input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 6px;
+    background: #1a1a1a;
+    color: #eee;
+    font-size: 12px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.dialog-body input:focus {
+    border-color: #4da6ff;
+}
+
+/* 让 radio 按钮不被 width:100% 撑宽 */
+.dialog-body input[type="radio"] {
+    width: auto;
+    height: 16px;
+    padding: 0;
+}
+
+.dialog-radio-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dialog-radio-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+    gap: 6px;
+}
+
+.dialog-radio-group input[type="radio"] {
+    width: auto;
+    height: 16px;
+    margin: 0;
+}
+
+.dialog-hint {
+    font-size: 10px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.dialog-btn {
+    padding: 4px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.dialog-btn.cancel {
+    background: #333;
+    color: #aaa;
+}
+
+.dialog-btn.confirm {
+    background: #4da6ff;
+    color: #fff;
+}
+
+.dialog-btn.confirm:hover {
+    background: #3a8de0;
+}

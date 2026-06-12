@@ -1,0 +1,466 @@
+/* ========== 歌词区域样式 ========== */
+.lyrics-container {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    /* 保证「主题色」效果下（canvas 全透明），明亮主题也有深色衬底 */
+    background: rgba(0,0,0,0.35);
+}
+
+/* ===== 歌词/评论隐字切换按钮 ===== */
+.lyrics-toggle-btn {
+    position: absolute;
+    top: 6px;
+    z-index: 20;
+    font-size: 0.75rem;
+    opacity: 0.5;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.2s;
+    color: rgba(255,255,255,0.7);
+    text-shadow: 0 0 4px rgba(0,0,0,0.5);
+    pointer-events: auto;
+    padding: 2px 5px;
+    border-radius: 3px;
+    line-height: 1;
+    background: rgba(0,0,0,0.15);
+}
+.lyrics-toggle-btn:hover { opacity: 1; background: rgba(0,0,0,0.3); }
+#toggleCommentsBtn { left: 8px; }
+#toggleLyricsBtn { left: 30px; }
+
+/* 隐藏状态 */
+.lyrics-container.comments-hidden .comments-area,
+.lyrics-container.comments-hidden .comments-sort-bar { display: none !important; }
+
+.lyrics-container.lyrics-hidden .lyrics-scroll-wrap,
+.lyrics-container.lyrics-hidden .effect-bar,
+.lyrics-container.lyrics-hidden .font-control { display: none !important; }
+
+.lyrics-bg-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 歌词滚动区域 */
+.lyrics-scroll-wrap {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    overflow-y: auto;
+    padding: 8px 20px;
+}
+
+/* 歌词文字 */
+.lyrics-box {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    padding-top: 45vh;
+    padding-bottom: 50vh;
+    color: #e8ecf0;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+}
+
+.lyrics-line {
+    padding: 3px 0;
+    cursor: pointer;
+}
+
+.lyrics-char {
+    transition: color 0.08s ease;
+}
+
+.lyrics-line.active {
+    font-weight: bold;
+}
+
+/* 卡拉OK高亮：由JS动态设置background */
+
+/* 歌词字体控制（右上角） — 无背景，mix-blend-mode 自动适应 */
+.lyrics-container .font-control {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.6rem;
+    background: transparent;
+    padding: 3px 8px;
+    border-radius: 16px;
+    color: #f0f4ff;
+    mix-blend-mode: difference;
+}
+
+.lyrics-container .font-control span:first-child {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.lyrics-container .font-control input[type="range"] {
+    width: 50px;
+    height: 3px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 0;
+    background: rgba(255,255,255,0.2);
+}
+
+.lyrics-container .font-control #fontVal {
+    flex-shrink: 0;
+    min-width: 26px;
+    text-align: right;
+}
+
+/* ===== 评论排序栏（与歌词大小同一区域） ===== */
+.comments-sort-bar {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.55rem;
+    background: transparent;
+    padding: 2px 6px;
+    border-radius: 12px;
+    color: var(--font-control-color, #e0e8ff);
+    mix-blend-mode: difference;
+    pointer-events: auto;
+    margin-top: 22px;
+}
+
+.comments-count {
+    font-size: 0.5rem;
+    opacity: 0.6;
+    min-width: 12px;
+    text-align: center;
+}
+
+.comments-sort-btn {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 0.5rem;
+    padding: 1px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 0.15s;
+}
+
+.comments-sort-btn.active {
+    opacity: 1;
+    background: rgba(255,255,255,0.1);
+}
+
+.comments-sort-btn:hover {
+    opacity: 0.7;
+}
+
+/* ===== 评论气泡列表（最多4条，自适应宽度） ===== */
+.comments-area {
+    position: absolute;
+    top: 52px;
+    right: 10px;
+    z-index: 9;
+    max-width: 175px;
+    max-height: 390px;
+    overflow: hidden;
+    background: transparent;
+    pointer-events: auto;
+    display: none;
+    opacity: 0.5;
+    transition: opacity 0.25s;
+}
+
+.comments-area.visible {
+    display: block;
+}
+
+.comments-area:hover {
+    opacity: 1;
+}
+
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: opacity 0.25s;
+}
+
+/* 评论气泡入场动画 */
+.comment-bubble {
+    animation: commentSlideIn 0.3s ease-out;
+}
+
+@keyframes commentSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.comment-bubble {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 7px;
+    padding: 5px 7px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    position: relative;
+    margin-right: 6px;
+    max-width: 175px;
+    width: fit-content;
+    min-width: 60px;
+    margin-left: auto;
+}
+
+.comment-text {
+    font-size: 0.52rem;
+    color: #2a2a3a;
+    overflow: hidden;
+    line-height: 1.6;
+    max-height: 17.8em;
+    word-break: break-word;
+}
+
+/* 气泡小尖尖（右侧） */
+.comment-bubble::before {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 8px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid rgba(255, 255, 255, 0.88);
+}
+
+.comment-bubble::after {
+    content: '';
+    position: absolute;
+    right: -7px;
+    top: 8px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+.comment-likes {
+    float: right;
+    font-size: 0.44rem;
+    color: #7a7a9a;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.15s;
+    line-height: 1;
+    margin-left: 4px;
+    margin-top: 3px;
+}
+
+.comment-likes:hover {
+    color: #2a2a4a;
+}
+
+/* ===== 评论详情弹窗 ===== */
+.comment-detail-dialog {
+    max-width: 380px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: #2a2a2a;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    margin: 10vh auto;
+}
+
+.comment-detail-dialog .dialog-title {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dialog-close {
+    cursor: pointer;
+    opacity: 0.5;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.dialog-close:hover { opacity: 1; background: rgba(255,255,255,0.08); }
+
+.comment-detail-main {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    gap: 8px;
+}
+
+.detail-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: rgba(255,255,255,0.05);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.detail-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.detail-user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.detail-name {
+    font-size: 0.65rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.detail-likes {
+    font-size: 0.55rem;
+    opacity: 0.4;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.detail-content {
+    font-size: 0.65rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    word-break: break-word;
+}
+
+.detail-floor-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.floor-loading {
+    text-align: center;
+    padding: 16px;
+    opacity: 0.4;
+    font-size: 0.6rem;
+}
+
+.floor-item {
+    padding: 10px 12px 10px 36px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    display: flex;
+    gap: 8px;
+}
+.floor-item:last-child { border-bottom: none; }
+
+.floor-item .detail-body .detail-content {
+    padding-left: 0;
+    margin-top: 2px;
+}
+
+.floor-item .detail-avatar {
+    width: 20px;
+    height: 20px;
+}
+
+.floor-item .detail-content {
+    font-size: 0.6rem;
+}
+
+.floor-item .detail-likes {
+    font-size: 0.5rem;
+}
+
+/* 展开更多回复 */
+.more-reply {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px 10px 12px;
+    cursor: pointer;
+    user-select: none;
+}
+.more-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+}
+.more-text {
+    font-size: 0.55rem;
+    opacity: 0.45;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.more-text:hover { opacity: 0.7; }
+.more-arrow {
+    font-size: 0.45rem;
+    opacity: 0.5;
+}
+
+/* 波浪加载动画 */
+@keyframes waveMove {
+    0%, 100% { opacity: 0.3; transform: translateX(0); }
+    50% { opacity: 1; transform: translateX(2px); }
+}
+.more-wave {
+    display: inline-block;
+    width: 10px;
+    text-align: center;
+    transition: none;
+}
+.more-wave.waving {
+    animation: waveMove 0.6s ease-in-out infinite;
+}
+
+/* 效果栏 */
+.effect-bar {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 3px 8px;
+    border-radius: 16px;
+    font-size: 0.6rem;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.effect-bar select {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 2px 6px;
+    color: inherit;
+    font-size: 0.6rem;
+    cursor: pointer;
+}

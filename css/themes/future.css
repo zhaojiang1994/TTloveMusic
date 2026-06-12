@@ -1,0 +1,199 @@
+/* ========== 天天爱听 · 未来幻光 ========== */
+body {
+    background: #050510;
+}
+
+.ttplayer-app {
+    background: #0a0a2a;
+}
+
+.logo {
+    color: #00ffff;
+}
+
+.style-btn {
+    background: #0a0a3a;
+    color: #00ccff;
+    border: 1px solid #00aaff;
+}
+
+.playlist-panel {
+    background: #0a0a2a;
+    border-right-color: #00aaff;
+}
+
+.view-mode-btn {
+    color: #88ddff;
+}
+
+.view-mode-btn.active {
+    background: #0a2a5a;
+    color: #00ffff;
+}
+
+.search-area {
+    background: #0a0a3a;
+    border: 1px solid #00aaff;
+}
+
+.search-area input {
+    color: #00ffff;
+}
+
+.add-music button {
+    background: #0a0a3a;
+    color: #00ccff;
+}
+
+.list-container {
+    background: #0a0a2a;
+}
+
+.song-item {
+    color: #ffffff; /* 👈 提亮普��状态歌名，在大片电光蓝里更醒目、不伤眼 */
+}
+
+.song-item:hover {
+    background: #0a2a5a;
+}
+
+.song-item.active {
+    background: #0a2a5a;
+    border-left: 2px solid #00ccff;
+}
+
+.artist-text {
+    color: #00ccff;
+}
+
+.song-item:hover .artist-text {
+    color: #00ffff;
+}
+
+.song-item.active .artist-text {
+    color: #00ffff;
+}
+
+.song-name-display {
+    color: #ffffff; /* 👈 提亮 */
+}
+
+.artist-scroll::-webkit-scrollbar-track {
+    background: #0a2a5a;
+}
+
+.artist-scroll::-webkit-scrollbar-thumb {
+    background: #00ccff;
+}
+
+.folder-item {
+    color: #ffffff; /* 👈 文件夹文字同步提�?*/
+}
+
+.folder-item:hover {
+    background: #0a2a5a;
+}
+
+/* .font-control ������������򣬼� lyrics.css */
+.lyrics-container .font-control {
+    color: #88ddff; /* 👈 让控制栏字体数��提示文字能被看�?*/
+}
+
+.now-playing-card {
+    background: #0a0a2a;
+    border: 1px solid #00aaff;
+    color: #00ffff; /* 👈 核心修改：让两旁跳动的时间继承高对比度的电光青色，一秒一秒跳动极其清�?*/
+}
+
+.song-title {
+    color: #00ffff;
+}
+
+.audio-controls button {
+    background: #0a0a3a;
+    color: #00ffff; /* 👈 提亮按钮内部的图标色 */
+}
+
+.play-big {
+    background: #00ccff !important; /* 👈 换掉原本突兀的洋红，改为极具幻光感的高亮冰蓝 */
+    color: #0a0a2a !important;     /* 按钮图标改用深底色衬�?*/
+}
+
+.lyrics-container {
+    background: #0a0a2a;
+}
+
+.lyrics-scroll-wrap {
+    background: #0a0a2a;
+}
+
+.lyrics-box {
+    color: #ffffff; /* 👈 提亮 */
+}
+
+.lyrics-line {
+    color: #88ddff;
+}
+
+.lyrics-line:hover {
+    background: #0a2a5a;
+    color: #00ffff;
+}
+
+.lyrics-line.active {
+    color: #00ffff;
+    font-weight: bold;
+    text-shadow: 0 0 8px #00ffff;
+}
+
+.effect-bar {
+    background: #0a0a2a;
+    border: 1px solid #00aaff;
+    color: #88ddff;
+}
+
+/* ========== 补充通用选择�?========== */
+.folder-navigation-bar { border-bottom: 1px solid #00aaff; }
+.folder-path-indicator { color: #66aacc; }
+.back-item { color: #00ccff; }
+.back-item:hover { background: #0a2a5a; }
+.clear-cache-btn { color: #66bbdd; }
+.clear-cache-btn:hover { background: #0a2a5a; }
+.add-source-btn { color: #00ccff; }
+.folder-grid-wrapper { background: transparent; }
+.folder-icon-wrap { color: #66ddff; }
+.source-divider-line { background: rgba(0, 200, 255, 0.2); }
+.source-divider-label { color: #66aacc; background: rgba(0, 150, 255, 0.06); }
+.source-name { color: #88ddff; }
+.source-date-display { color: #4488aa; }
+.source-divider-delete { color: #ff4488; }
+.pagination-bar { border-top: 1px solid rgba(0, 170, 255, 0.15); }
+.page-btn { border: 1px solid rgba(0, 170, 255, 0.2); color: rgba(100, 200, 255, 0.5); }
+.page-btn:hover:not(:disabled) { background: rgba(0, 150, 255, 0.15); color: rgba(150, 220, 255, 0.8); }
+.page-btn:disabled { opacity: 0.2; }
+.page-info { color: rgba(100, 200, 255, 0.4); }
+.page-size-select { background: transparent; border: 1px solid rgba(0, 170, 255, 0.2); color: rgba(100, 200, 255, 0.5); }
+.song-index { color: #4488aa; }
+.song-duration { color: #4488aa; }
+.empty-list { color: #5599bb; }
+.empty-list i { opacity: 0.25; }
+.add-source-overlay { background: rgba(0, 0, 20, 0.7); }
+.add-source-dialog { background: #0a0a3a; border: 1px solid #00aaff; color: #b0ddff; }
+.dialog-title { color: #00ffff; }
+.dialog-body label { color: #66aacc; }
+.dialog-body input { background: #050520; border: 1px solid #0088cc; color: #00ffff; }
+.dialog-hint { color: #4488aa; }
+.dialog-btn.cancel { background: #0a0a3a; color: #66aacc; border: 1px solid #0066aa; }
+.dialog-btn.confirm { background: #00ccff; color: #050510; }
+::-webkit-scrollbar-track { background: rgba(0, 150, 255, 0.05); }
+::-webkit-scrollbar-thumb { background: rgba(0, 200, 255, 0.2); }
+.folder-name-scroll { color: #88ddff; }
+.theme-select { background: #0a0a3a; color: #88ddff; border: 1px solid #00aaff; }
+.theme-select option { background: #0a0a2a; color: #88ddff; }
+.style-label { color: #66ccff; opacity: 0.6; }
+.clear-cache-title-btn { color: #66ccff; opacity: 0.4; }
+.clear-cache-title-btn:hover { opacity: 1; color: #ff4488; background: rgba(0,200,255,0.06); }
+.win-btn { color: #66ccff; opacity: 0.5; }
+.win-btn:hover { opacity: 1; background: rgba(0,200,255,0.08); color: #00ffff; }
+:root { --progress-fill: #00ffff; --progress-buffer: rgba(0,255,255,0.25); --progress-bg: rgba(0,0,0,0.25); }
+

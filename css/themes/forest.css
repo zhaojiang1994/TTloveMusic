@@ -1,0 +1,72 @@
+/* ========== 森林物语 ========== */
+body { background: #0a1a0a; }
+.ttplayer-app { background: linear-gradient(180deg, #1a2a1a, #0a1a0a); }
+.logo { color: #44bb66; }
+.theme-select { background: #1a2a1a; color: #88aa88; }
+.theme-select option { background: #1a2a1a; color: #88aa88; }
+.win-btn { color: #668866; }
+.win-btn:hover { background: #2a3a2a; }
+.playlist-panel { background: #0a1a0a; }
+.view-mode-btn { color: #aaccaa; }
+.view-mode-btn.active { background: #44bb66; color: #fff; }
+.search-area { background: #1a2a1a; border: 1px solid #2a4a2a; }
+.search-area input { color: #bbddbb; }
+.list-container { background: #0a1a0a; }
+.song-item { color: #bbddbb; }
+.song-item:hover { background: #1a2a1a; }
+.song-item.active { background: #1a2a1a; border-left: 2px solid #44bb66; }
+.artist-text { color: #668866; }
+.song-item:hover .artist-text { color: #88aa88; }
+.song-item.active .artist-text { color: #66dd88; }
+.song-index { color: #335533; }
+.song-duration { color: #335533; }
+.lyrics-container .font-control { color: #88cc88; }
+.now-playing-card { background: #1a2a1a; color: #bbddbb; }
+.song-title { color: #ddffdd; }
+.song-artist { color: #88aa88; }
+.audio-controls button { background: #2a3a2a; color: #bbddbb; border: 1px solid #3a5a3a; }
+.play-big { background: #44bb66 !important; color: #fff !important; }
+#progressBar { background: #2a3a2a; }
+#progressBar::-webkit-slider-thumb { background: #44bb66; }
+.volume-box input::-webkit-slider-thumb { background: #44bb66; }
+.lyrics-container { background: #0a1a0a; }
+.lyrics-box { color: #bbddbb; }
+.lyrics-line { color: #88aa88; }
+.lyrics-line:hover { background: #1a2a1a; color: #ddffdd; }
+.lyrics-line.active { color: #44bb66; font-weight: bold; }
+.effect-bar { background: #1a2a1a; border: 1px solid #2a4a2a; color: #88aa88; }
+.folder-navigation-bar { border-bottom: 1px solid #2a4a2a; }
+.folder-path-indicator { color: #88aa88; }
+.back-item { color: #44bb66; }
+.back-item:hover { background: #1a2a1a; }
+.clear-cache-btn { color: #668866; }
+.clear-cache-btn:hover { background: #1a2a1a; }
+.add-source-btn { color: #44bb66; }
+.folder-grid-wrapper { background: transparent; }
+.folder-icon-wrap { color: #66cc44; }
+.source-divider-line { background: #2a4a2a; }
+.source-divider-label { color: #88aa88; background: #1a2a1a; }
+.source-name { color: #bbddbb; }
+.source-date-display { color: #446644; }
+.source-divider-delete { color: #e74c3c; }
+.pagination-bar { border-top: 1px solid #2a4a2a; }
+.page-btn { border: 1px solid #2a4a2a; color: #668866; }
+.page-btn:hover:not(:disabled) { background: #1a2a1a; color: #bbddbb; }
+.page-info { color: #335533; }
+.page-size-select { background: #0a1a0a; border: 1px solid #2a4a2a; color: #88aa88; }
+.empty-list { color: #668866; }
+.empty-list i { opacity: 0.25; }
+.add-source-overlay { background: rgba(0,0,0,0.6); }
+.add-source-dialog { background: #1a2a1a; border: 1px solid #2a4a2a; color: #bbddbb; }
+.dialog-title { color: #44bb66; }
+.dialog-body label { color: #668866; }
+.dialog-body input { background: #0a1a0a; border: 1px solid #2a4a2a; color: #bbddbb; }
+.dialog-hint { color: #446644; }
+.dialog-btn.cancel { background: #2a3a2a; color: #668866; }
+.dialog-btn.confirm { background: #44bb66; color: #fff; }
+::-webkit-scrollbar-track { background: #0a1a0a; }
+::-webkit-scrollbar-thumb { background: #2a4a2a; }
+.folder-name-scroll { color: #bbddbb; }
+.folder-item.grid-box .folder-name-scroll { color: #bbddbb; }
+:root { --progress-fill: #44bb66; --progress-buffer: rgba(68,187,102,0.25); --progress-bg: rgba(0,0,0,0.25); }
+

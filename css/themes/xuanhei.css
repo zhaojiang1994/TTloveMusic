@@ -1,0 +1,63 @@
+/* ========== 炫黑 ========== */
+body { background: #000; }
+.ttplayer-app { background: #0a0a0a; }
+.logo { color: #a0a0a0; }
+.theme-select { background: #1a1a1a; color: #a0a0a0; }
+.theme-select option { background: #1a1a1a; color:#ccc; }
+.win-btn { color: #707070; } .win-btn:hover { background: #2a2a2a; }
+.playlist-panel { background: #000; }
+.view-mode-btn { color: #aaa; }
+.view-mode-btn.active { background: #0080ff; color: #fff; }
+.search-area { background: #111; border: 1px solid #333; }
+.search-area input { color: #ccc; }
+.list-container { background: #000; }
+.song-item { color: #ccc; } .song-item:hover { background: #111; }
+.song-item.active { background: #111; border-left: 2px solid #0080ff; }
+.artist-text { color: #707070; }
+.song-item:hover .artist-text { color: #999; }
+.song-item.active .artist-text { color: #0080ff; }
+.song-index { color: #505050; } .song-duration { color: #505050; }
+.lyrics-container .font-control { color: #aaa; }
+.now-playing-card { background: #0a0a0a; color: #ccc; }
+.song-title { color: #eee; } .song-artist { color: #888; }
+.audio-controls button { background: #1a1a1a; color: #ccc; border: 1px solid #333; }
+.play-big { background: #0080ff !important; color: #fff !important; }
+#progressBar { background: #222; }
+#progressBar::-webkit-slider-thumb { background: #0080ff; }
+.volume-box input::-webkit-slider-thumb { background: #0080ff; }
+.lyrics-container { background: #000; }
+.lyrics-box { color: #ccc; } .lyrics-line { color: #999; }
+.lyrics-line:hover { background: #111; color: #eee; }
+.lyrics-line.active { color: #0080ff; font-weight: bold; }
+.effect-bar { background: #0a0a0a; border: 1px solid #222; color: #888; }
+.effect-bar select { background: #1a1a1a; color: #aaa; border: 1px solid #333; }
+.folder-navigation-bar { border-bottom: 1px solid #222; }
+.folder-path-indicator { color: #707070; }
+.back-item { color: #0080ff; } .back-item:hover { background: #111; }
+.clear-cache-btn { color: #707070; } .clear-cache-btn:hover { background: #111; }
+.add-source-btn { color: #0080ff; }
+.folder-grid-wrapper { background: transparent; }
+.folder-icon-wrap { color: #0080ff; }
+.source-divider-line { background: #222; }
+.source-divider-label { color: #707070; background: #0a0a0a; }
+.source-name { color: #aaa; } .source-date-display { color: #505050; }
+.source-divider-delete { color: #e74c3c; }
+.pagination-bar { border-top: 1px solid #222; }
+.page-btn { border: 1px solid #222; color: #707070; }
+.page-btn:hover:not(:disabled) { background: #111; color: #ccc; }
+.page-info { color: #505050; }
+.page-size-select { background: #000; border: 1px solid #222; color: #888; }
+.empty-list { color: #707070; } .empty-list i { opacity: 0.25; }
+.add-source-overlay { background: rgba(0,0,0,0.8); }
+.add-source-dialog { background: #111; border: 1px solid #333; color: #ccc; }
+.dialog-title { color: #0080ff; } .dialog-body label { color: #707070; }
+.dialog-body input { background: #000; border: 1px solid #333; color: #ccc; }
+.dialog-hint { color: #505050; }
+.dialog-btn.cancel { background: #1a1a1a; color: #707070; }
+.dialog-btn.confirm { background: #0080ff; color: #fff; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #222; }
+.folder-name-scroll { color: #aaa; }
+.folder-item.grid-box .folder-name-scroll { color: #aaa; }
+:root { --progress-fill: #0080ff; --progress-buffer: rgba(0,128,255,0.25); --progress-bg: rgba(0,0,0,0.25); }
+

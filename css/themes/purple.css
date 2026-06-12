@@ -1,0 +1,73 @@
+/* ========== 炫紫神话 ========== */
+body { background: #23243A; }
+.ttplayer-app { background: linear-gradient(180deg, #2B2C44, #23243A); }
+.logo { color: #D948A1; }
+.theme-select { background: #2B2C44; color: #C0A0D0; }
+.theme-select option { background: #23243A; color: #E6E6F2; }
+.win-btn { color: #9A70AA; }
+.win-btn:hover { background: #393A58; }
+.playlist-panel { background: #23243A; }
+.view-mode-btn { color: #b0b0d8; }
+.view-mode-btn.active { background: #D948A1; color: #fff; }
+.search-area { background: #1E1F2E; border: 1px solid #393A58; }
+.search-area input { color: #E6E6F2; }
+.list-container { background: #23243A; }
+.song-item { color: #E6E6F2; }
+.song-item:nth-child(odd) { background: rgba(57,58,88,0.08); }
+.song-item:hover { background: #2B2C44; }
+.song-item.active { background: #2B2C44; border-left: 2px solid #D948A1; }
+.artist-text { color: #8888BB; }
+.song-item:hover .artist-text { color: #C0A0E0; }
+.song-item.active .artist-text { color: #E6E6F2; }
+.song-index, .song-duration { color: #5A5A88; }
+.lyrics-container .font-control { color: #a8a8d0; }
+.now-playing-card { background: #1E1F2E; color: #E6E6F2; }
+.song-title { color: #E6E6F2; }
+.song-artist { color: #7578AB; }
+.audio-controls button { background: linear-gradient(180deg, #393A58, #2B2C44); color: #fff; border: 1px solid #1E1F2E; border-radius: 50%; width: 34px; height: 34px; box-shadow: inset 0 2px 4px rgba(255,255,255,0.15), 0 2px 4px rgba(0,0,0,0.4); position: relative; overflow: hidden; }
+.audio-controls button::after { content: ''; position: absolute; top: 5%; left: 10%; width: 80%; height: 40%; background: linear-gradient(180deg, rgba(217,72,161,0.35), transparent); border-radius: 50%; pointer-events: none; }
+.audio-controls button:hover { background: linear-gradient(180deg, #444566, #333450); transform: scale(1.05); }
+.play-big { background: linear-gradient(180deg, #D948A1, #B83888) !important; color: #fff !important; width: 42px !important; height: 42px !important; box-shadow: inset 0 2px 6px rgba(255,255,255,0.2), 0 0 8px rgba(217,72,161,0.4) !important; }
+#progressBar { background: #1E1F2E; height: 4px; border-radius: 2px; }
+#progressBar::-webkit-slider-thumb { background: #D948A1; width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 4px rgba(217,72,161,0.5); }
+.volume-box input::-webkit-slider-thumb { background: #D948A1; box-shadow: 0 0 4px rgba(217,72,161,0.5); }
+.lyrics-container { background: #23243A; }
+.lyrics-box { color: #E6E6F2; }
+.lyrics-line { color: #7578AB; }
+.lyrics-line:hover { background: #2B2C44; color: #E6E6F2; }
+.lyrics-line.active { color: #C080E0; font-weight: bold; text-shadow: 0 0 10px rgba(192,128,224,0.5); }
+.effect-bar { background: #2B2C44; border: 1px solid #393A58; color: #7578AB; border-radius: 16px; }
+.effect-bar select { background: #393A58; color: #C0A0D0; border: 1px solid #4A4B65; border-radius: 16px; }
+.folder-navigation-bar { border-bottom: 1px solid #393A58; }
+.folder-path-indicator { color: #7578AB; }
+.back-item { color: #D948A1; }
+.back-item:hover { background: #2B2C44; }
+.clear-cache-btn { color: #7578AB; }
+.clear-cache-btn:hover { background: #2B2C44; }
+.add-source-btn { color: #D948A1; }
+.folder-icon-wrap { color: #D948A1; }
+.source-divider-line { background: #393A58; }
+.source-divider-label { color: #7578AB; background: #2B2C44; }
+.source-name { color: #E6E6F2; }
+.source-date-display { color: #5A5A88; }
+.source-divider-delete { color: #E74C3C; }
+.pagination-bar { border-top: 1px solid #393A58; }
+.page-btn { border: 1px solid #393A58; color: #7578AB; border-radius: 12px; }
+.page-btn:hover:not(:disabled) { background: #2B2C44; color: #E6E6F2; }
+.page-info { color: #5A5A88; }
+.page-size-select { background: #23243A; border: 1px solid #393A58; color: #7578AB; border-radius: 12px; }
+.empty-list { color: #5A5A88; }
+.empty-list i { opacity: 0.25; }
+.add-source-overlay { background: rgba(10,10,20,0.7); }
+.add-source-dialog { background: #2B2C44; border: 1px solid #393A58; color: #E6E6F2; border-radius: 10px; }
+.dialog-title { color: #D948A1; }
+.dialog-body label { color: #7578AB; }
+.dialog-body input { background: #23243A; border: 1px solid #393A58; color: #E6E6F2; border-radius: 8px; }
+.dialog-hint { color: #5A5A88; }
+.dialog-btn.cancel { background: #393A58; color: #7578AB; border-radius: 16px; }
+.dialog-btn.confirm { background: #D948A1; color: #fff; border-radius: 16px; }
+::-webkit-scrollbar-track { background: #23243A; }
+::-webkit-scrollbar-thumb { background: #393A58; border-radius: 4px; }
+.folder-name-scroll { color: #E6E6F2; }
+.folder-item.grid-box .folder-name-scroll { color: #E6E6F2; }
+:root { --progress-fill: #D948A1; --progress-buffer: rgba(217,72,161,0.25); --progress-bg: rgba(0,0,0,0.25); }

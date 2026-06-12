@@ -1,0 +1,63 @@
+/* ========== 古朴乐章（羊皮纸钢琴谱） ========== */
+body { background: #c8b89a; }
+.ttplayer-app { background: linear-gradient(135deg, #f5ecd8, #ede0c8); }
+.logo { color: #6a4a2a; }
+.theme-select { background: #ede0c8; color: #5a3a1a; }
+.theme-select option { background: #fff; color: #333; }
+.win-btn { color: #8a6a3a; } .win-btn:hover { background: #e0d0b8; }
+.playlist-panel { background: #f5ecd8; }
+.view-mode-btn { color: #8a6a3a; }
+.view-mode-btn.active { background: #b89868; color: #fff; }
+.search-area { background: #fff; border: 1px solid #dcc8a8; }
+.search-area input { color: #3a2510; }
+.list-container { background: #f5ecd8; }
+.song-item { color: #3a2510; } .song-item:hover { background: #ede0c8; }
+.song-item.active { background: #ede0c8; border-left: 2px solid #b89868; }
+.artist-text { color: #8a7a5a; }
+.song-item:hover .artist-text { color: #5a3a1a; }
+.song-item.active .artist-text { color: #8a6a3a; }
+.song-index { color: #b8a888; } .song-duration { color: #b8a888; }
+.lyrics-container .font-control { color: #5a3a1a; }
+.now-playing-card { background: #f0e8d4; color: #3a2510; }
+.song-title { color: #3a2510; } .song-artist { color: #8a7a5a; }
+.audio-controls button { background: #e0d0b8; color: #5a3a1a; border: 1px solid #d0b898; }
+.play-big { background: #b89868 !important; color: #fff !important; }
+#progressBar { background: #e0d0b8; }
+#progressBar::-webkit-slider-thumb { background: #b89868; }
+.volume-box input::-webkit-slider-thumb { background: #b89868; }
+.lyrics-container { background: #f5ecd8; }
+.lyrics-box { color: #3a2510; } .lyrics-line { color: #8a7a5a; }
+.lyrics-line:hover { background: #ede0c8; color: #2a1a08; }
+.lyrics-line.active { color: #d4a050; font-weight: bold; text-shadow: 0 0 4px rgba(180,140,60,0.3); }
+.effect-bar { background: #ede0c8; border: 1px solid #d0b898; color: #6a4a2a; }
+.effect-bar select { background: #e0d0b8; color: #4a2a10; border: 1px solid #d0b898; }
+.folder-navigation-bar { border-bottom: 1px solid #d0b898; }
+.folder-path-indicator { color: #8a7a5a; }
+.back-item { color: #6a4a2a; } .back-item:hover { background: #ede0c8; }
+.clear-cache-btn { color: #8a7a5a; } .clear-cache-btn:hover { background: #ede0c8; }
+.add-source-btn { color: #6a4a2a; }
+.folder-grid-wrapper { background: transparent; }
+.folder-icon-wrap { color: #b89868; }
+.source-divider-line { background: #d0b898; }
+.source-divider-label { color: #8a7a5a; background: #ede0c8; }
+.source-name { color: #5a3a1a; } .source-date-display { color: #b8a888; }
+.source-divider-delete { color: #a04020; }
+.pagination-bar { border-top: 1px solid #d0b898; }
+.page-btn { border: 1px solid #d0b898; color: #8a7a5a; }
+.page-btn:hover:not(:disabled) { background: #ede0c8; color: #3a2510; }
+.page-info { color: #b8a888; }
+.page-size-select { background: #f5ecd8; border: 1px solid #d0b898; color: #6a4a2a; }
+.empty-list { color: #8a7a5a; } .empty-list i { opacity: 0.3; }
+.add-source-overlay { background: rgba(100,80,60,0.4); }
+.add-source-dialog { background: #f5ecd8; border: 1px solid #d0b898; color: #3a2510; }
+.dialog-title { color: #6a4a2a; } .dialog-body label { color: #8a7a5a; }
+.dialog-body input { background: #fff; border: 1px solid #d0b898; color: #2a1a08; }
+.dialog-hint { color: #b8a888; }
+.dialog-btn.cancel { background: #ede0c8; color: #5a3a1a; }
+.dialog-btn.confirm { background: #b89868; color: #fff; }
+::-webkit-scrollbar-track { background: #ede0c8; }
+::-webkit-scrollbar-thumb { background: #d0b898; }
+.folder-name-scroll { color: #4a2a10; }
+.folder-item.grid-box .folder-name-scroll { color: #4a2a10; }
+:root { --progress-fill: #b89868; --progress-buffer: rgba(184,152,104,0.25); --progress-bg: rgba(0,0,0,0.25); }
+

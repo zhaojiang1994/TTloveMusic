@@ -1,0 +1,359 @@
+/* ========== TTPlayer 暗色 · 天天爱听 ========== */
+/* 磨砂金属质感 + 暗色渐变 + 冰蓝/橙红点缀 */
+
+body {
+    background: #0c0c0e;
+}
+
+.ttplayer-app {
+    background: linear-gradient(170deg, #1a1a20 0%, #141418 40%, #0e0e12 100%);
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== 顶部栏 ===== */
+.top-bar {
+    background: linear-gradient(180deg, rgba(40, 40, 48, 0.5), rgba(20, 20, 28, 0.3));
+    border-bottom: 1px solid rgba(128, 128, 140, 0.08);
+}
+
+.logo {
+    color: #e8e8f0;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.08);
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.theme-select {
+    background: rgba(30, 30, 38, 0.8);
+    color: #a8a8b8;
+    border: 1px solid rgba(128, 128, 140, 0.12);
+    border-radius: 3px;
+}
+
+.theme-select option {
+    background: #1a1a20;
+    color: #c8c8d0;
+}
+
+.style-label {
+    color: #8888a0;
+    opacity: 0.5;
+}
+
+.clear-cache-title-btn {
+    color: #8888a0;
+    opacity: 0.4;
+}
+
+.clear-cache-title-btn:hover {
+    opacity: 1;
+    color: #ff5555;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.win-btn {
+    color: #8888a0;
+    opacity: 0.4;
+}
+
+.win-btn:hover {
+    opacity: 1;
+    background: rgba(128, 128, 140, 0.1);
+    color: #e8e8f0;
+}
+
+/* ===== 播放列表面板 ===== */
+.playlist-panel {
+    background: linear-gradient(180deg, #1a1a22, #14141a);
+    border-right: 1px solid rgba(128, 128, 140, 0.06);
+}
+
+.playlist-header {
+    border-bottom: 1px solid rgba(128, 128, 140, 0.06);
+}
+
+.view-mode-btn {
+    color: #8a8a9a;
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.65rem;
+    transition: all 0.12s;
+}
+
+.view-mode-btn:hover {
+    border-color: rgba(128, 128, 140, 0.15);
+    background: rgba(128, 128, 140, 0.06);
+    color: #b8b8c8;
+}
+
+.view-mode-btn.active {
+    background: linear-gradient(180deg, #3a3a48, #2a2a36);
+    color: #e8e8f0;
+    border-color: rgba(128, 128, 140, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.fullscreen-btn {
+    color: #8a8a9a;
+    opacity: 0.4;
+}
+
+.fullscreen-btn:hover {
+    color: #e8e8f0;
+    opacity: 1;
+    background: rgba(128, 128, 140, 0.1);
+}
+
+.search-area {
+    background: rgba(16, 16, 22, 0.8);
+    border: 1px solid rgba(128, 128, 140, 0.08);
+    border-radius: 3px;
+}
+
+.search-area input {
+    color: #c8c8d0;
+}
+
+.search-area input::placeholder {
+    color: #5a5a6a;
+    opacity: 0.5;
+}
+
+.list-container {
+    background: transparent;
+}
+
+/* ===== 列表项 ===== */
+.song-item {
+    color: #c8c8d0;
+    border-bottom: 1px solid rgba(128, 128, 140, 0.04);
+    padding: 3px 4px;
+    transition: background 0.08s;
+}
+
+.song-item:hover {
+    background: rgba(128, 128, 140, 0.06);
+}
+
+.song-item.active {
+    background: rgba(200, 100, 50, 0.08);
+    border-left: 2px solid #ff8844;
+}
+
+.artist-text {
+    color: #7a7a8a;
+}
+
+.song-item:hover .artist-text {
+    color: #a8a8b8;
+}
+
+.song-item.active .artist-text {
+    color: #ff8844;
+}
+
+.song-index, .song-duration {
+    color: #5a5a6a;
+}
+
+/* ========== 优化：文件夹区域对比度提升 ========== */
+
+/* 文件夹条目整体容器 */
+.folder-item {
+    color: #e0e0e8; /* 提升基础亮度 */
+    border-radius: 3px;
+    padding: 4px 8px;
+    transition: all 0.15s ease;
+}
+
+.folder-item:hover {
+    background: rgba(255, 255, 255, 0.08); /* 悬停时使用更轻盈的白色透明背景，而非灰色 */
+}
+
+/* 文件夹名称文字 - 重点优化区域 */
+.folder-name-scroll {
+    color: #e8e8f0;      /* 将名称颜色提亮到接近白色，确保在深底上清晰 */
+    font-weight: 500;     /* 增加字重，让笔画更扎实 */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* 添加极细阴影，增加文字与背景的分离度 */
+    letter-spacing: 0.2px;
+}
+
+/* 文件夹图标 - 增加色差 */
+.folder-icon-wrap {
+    color: #a8b8d0;       /* 稍微偏蓝的金属灰，与橙色主题形成互补对比 */
+    opacity: 0.9;
+    margin-right: 8px;
+}
+
+/* 文件夹在列表中的悬停状态 */
+.folder-item:hover .folder-name-scroll {
+    color: #ffffff;       /* 悬停时文字变为纯白，提示更强 */
+}
+
+/* 如果有选中态，加强对比 */
+.folder-item.active {
+    background: rgba(255, 136, 68, 0.12) !important;
+    border-left: 2px solid #ff8844;
+}
+
+.folder-item.active .folder-name-scroll {
+    color: #ffaa77;       /* 选中时用暖橙色提亮 */
+    font-weight: 600;
+}
+
+/* ===== 播放器卡片 ===== */
+.now-playing-card {
+    background: linear-gradient(135deg, rgba(28, 28, 36, 0.8), rgba(18, 18, 26, 0.6));
+    border: 1px solid rgba(128, 128, 140, 0.08);
+    border-radius: 8px;
+    color: #b8b8c8;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.song-title {
+    color: #e8e8f0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.song-artist {
+    color: #88aacc;
+}
+
+/* ===== 播放控制 ===== */
+.audio-controls button {
+    background: linear-gradient(180deg, #3a3a48, #2a2a36);
+    color: #b8b8c8;
+    border: 1px solid rgba(128, 128, 140, 0.12);
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.1s;
+    width: 30px;
+    height: 30px;
+}
+
+.audio-controls button:hover {
+    background: linear-gradient(180deg, #4a4a58, #3a3a48);
+    transform: scale(1.05);
+    border-color: rgba(128, 128, 140, 0.2);
+}
+
+.play-big {
+    background: linear-gradient(180deg, #ff8844, #e06820) !important;
+    color: #ffffff !important;
+    width: 36px !important;
+    height: 36px !important;
+    box-shadow: 0 2px 8px rgba(255, 136, 68, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    border: none !important;
+}
+
+/* ===== 进度条 ===== */
+#progressBar::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #ff8844 0%, #ff8844 var(--pct,0%), rgba(128, 128, 140, 0.1) var(--pct,0%), rgba(128, 128, 140, 0.1) 100%);
+}
+
+#progressBar::-webkit-slider-thumb {
+    background: #ff8844;
+    box-shadow: 0 0 6px rgba(255, 136, 68, 0.3);
+}
+
+.volume-box input::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #ff8844 0%, #ff8844 var(--vpct,50%), rgba(128, 128, 140, 0.08) var(--vpct,50%), rgba(128, 128, 140, 0.08) 100%);
+}
+
+.volume-box input::-webkit-slider-thumb {
+    background: #ff8844;
+}
+
+/* ===== 歌词 ===== */
+.lyrics-container {
+    background: rgba(12, 12, 18, 0.5);
+}
+
+.lyrics-scroll-wrap {
+    background: transparent;
+}
+
+.lyrics-box {
+    color: #c8c8d0;
+}
+
+.lyrics-line {
+    color: #6a6a7a;
+    transition: all 0.12s;
+}
+
+.lyrics-line:hover {
+    background: rgba(128, 128, 140, 0.04);
+    color: #a8a8b8;
+}
+
+.lyrics-line.active {
+    color: #ff8844;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 136, 68, 0.25);
+}
+
+.lyrics-container .font-control {
+    color: #a8a8b8;
+}
+
+.effect-bar {
+    background: rgba(24, 24, 32, 0.7);
+    border: 1px solid rgba(128, 128, 140, 0.08);
+    color: #a8a8b8;
+    backdrop-filter: blur(4px);
+}
+
+.effect-bar select {
+    background: rgba(30, 30, 38, 0.7);
+    color: #a8a8b8;
+    border: 1px solid rgba(128, 128, 140, 0.1);
+}
+
+/* ===== 文件夹视图 ===== */
+.folder-navigation-bar { border-bottom: 1px solid rgba(128, 128, 140, 0.06); }
+.folder-path-indicator { color: #7a7a8a; }
+.back-item { color: #88aacc; }
+.back-item:hover { background: rgba(128, 128, 140, 0.06); }
+.clear-cache-btn { color: #7a7a8a; }
+.clear-cache-btn:hover { background: rgba(128, 128, 140, 0.06); }
+.add-source-btn { color: #88aacc; }
+.folder-icon-wrap { color: #8888a0; }
+
+.source-divider-line { background: rgba(128, 128, 140, 0.06); }
+.source-divider-label { color: #7a7a8a; background: rgba(128, 128, 140, 0.03); }
+.source-name { color: #a8a8b8; }
+.source-date-display { color: #5a5a6a; }
+.source-divider-delete { color: #ff5555; }
+
+.pagination-bar { border-top: 1px solid rgba(128, 128, 140, 0.06); }
+.page-btn { border: 1px solid rgba(128, 128, 140, 0.08); color: #7a7a8a; background: transparent; }
+.page-btn:hover:not(:disabled) { background: rgba(128, 128, 140, 0.06); color: #b8b8c8; }
+.page-btn:disabled { opacity: 0.2; }
+.page-info { color: #5a5a6a; }
+.page-size-select { background: rgba(20, 20, 28, 0.6); border: 1px solid rgba(128, 128, 140, 0.08); color: #7a7a8a; }
+.song-index { color: #5a5a6a; }
+.song-duration { color: #5a5a6a; }
+.empty-list { color: #6a6a7a; }
+
+/* ===== 弹框 ===== */
+.add-source-overlay { background: rgba(5, 5, 8, 0.8); }
+.add-source-dialog { background: linear-gradient(180deg, #20202a, #18181e); border: 1px solid rgba(128, 128, 140, 0.1); color: #c8c8d0; border-radius: 8px; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6); }
+.dialog-title { color: #e8e8f0; border-bottom: 1px solid rgba(128, 128, 140, 0.06); }
+.dialog-body label { color: #7a7a8a; }
+.dialog-body input { background: rgba(12, 12, 18, 0.8); border: 1px solid rgba(128, 128, 140, 0.1); color: #c8c8d0; border-radius: 3px; }
+.dialog-hint { color: #5a5a6a; }
+.dialog-btn.cancel { background: rgba(30, 30, 38, 0.6); color: #7a7a8a; border: 1px solid rgba(128, 128, 140, 0.08); border-radius: 3px; }
+.dialog-btn.confirm { background: linear-gradient(180deg, #ff8844, #e06820); color: #fff; border: none; border-radius: 3px; box-shadow: 0 1px 4px rgba(255, 136, 68, 0.2); }
+
+/* ===== 滚动条 ===== */
+::-webkit-scrollbar-track { background: rgba(16, 16, 22, 0.4); }
+::-webkit-scrollbar-thumb { background: rgba(128, 128, 140, 0.12); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(128, 128, 140, 0.2); }
+
+.folder-name-scroll { color: #a8a8b8; }
+
+:root { --progress-fill: #ff8844; --progress-buffer: rgba(255,136,68,0.25); --progress-bg: rgba(0,0,0,0.25); }

@@ -1,0 +1,332 @@
+/* ========== TTPlayer 经典 · 天天爱听 ========== */
+/* XP 时代玻璃质感 + 深蓝渐变 + 金色点缀 */
+
+body {
+    background: #0a0e2a;
+}
+
+.ttplayer-app {
+    background: linear-gradient(160deg, #0d1a3a 0%, #0f1f4a 40%, #0a1530 100%);
+    box-shadow: inset 0 0 60px rgba(0, 100, 255, 0.05);
+}
+
+/* ===== 顶部栏 ===== */
+.top-bar {
+    background: linear-gradient(180deg, rgba(20, 40, 80, 0.6), rgba(10, 20, 50, 0.4));
+    border-bottom: 1px solid rgba(100, 180, 255, 0.12);
+}
+
+.logo {
+    color: #ffd700;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.25);
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.theme-select {
+    background: rgba(20, 40, 80, 0.7);
+    color: #b8d4ff;
+    border: 1px solid rgba(100, 180, 255, 0.2);
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+.theme-select option {
+    background: #0d1a3a;
+    color: #b8d4ff;
+}
+
+.style-label {
+    color: #88bbee;
+    opacity: 0.6;
+}
+
+.clear-cache-title-btn {
+    color: #88bbee;
+    opacity: 0.4;
+}
+
+.clear-cache-title-btn:hover {
+    opacity: 1;
+    color: #ff6b6b;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.win-btn {
+    color: #88bbee;
+    opacity: 0.5;
+}
+
+.win-btn:hover {
+    opacity: 1;
+    background: rgba(60, 120, 255, 0.2);
+    color: #fff;
+}
+
+/* ===== 播放列表面板 ===== */
+.playlist-panel {
+    background: linear-gradient(180deg, #0d1a3a, #0a1530);
+    border-right: 1px solid rgba(60, 120, 200, 0.15);
+}
+
+.playlist-header {
+    border-bottom: 1px solid rgba(60, 120, 200, 0.15);
+    padding: 8px 10px;
+}
+
+.view-mode-btn {
+    color: #88aadd;
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    transition: all 0.15s;
+}
+
+.view-mode-btn:hover {
+    border-color: rgba(100, 180, 255, 0.25);
+    background: rgba(40, 80, 160, 0.15);
+}
+
+.view-mode-btn.active {
+    background: linear-gradient(180deg, #2a5aaa, #1a3a7a);
+    color: #ffffff;
+    border-color: rgba(100, 180, 255, 0.3);
+    box-shadow: 0 1px 4px rgba(0, 40, 120, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.fullscreen-btn {
+    color: #88aadd;
+    opacity: 0.5;
+}
+
+.fullscreen-btn:hover {
+    color: #ffffff;
+    opacity: 1;
+    background: rgba(60, 120, 200, 0.2);
+}
+
+.search-area {
+    background: rgba(10, 20, 48, 0.6);
+    border: 1px solid rgba(60, 120, 200, 0.2);
+    border-radius: 4px;
+}
+
+.search-area input {
+    color: #d0e4ff;
+}
+
+.search-area input::placeholder {
+    color: #4a7a9a;
+    opacity: 0.6;
+}
+
+.list-container {
+    background: transparent;
+}
+
+/* ===== 列表项 ===== */
+.song-item {
+    color: #d0e4ff;
+    border-bottom: 1px solid rgba(40, 80, 160, 0.1);
+    padding: 3px 4px;
+    transition: background 0.1s;
+}
+
+.song-item:hover {
+    background: rgba(40, 80, 160, 0.12);
+}
+
+.song-item.active {
+    background: rgba(40, 80, 160, 0.18);
+    border-left: 2px solid #ffd700;
+}
+
+.artist-text {
+    color: #6a9acc;
+}
+
+.song-item:hover .artist-text {
+    color: #aaccff;
+}
+
+.song-item.active .artist-text {
+    color: #ffd700;
+}
+
+.song-index, .song-duration {
+    color: #4a6a8a;
+}
+
+.folder-item {
+    color: #d0e4ff;
+    border-radius: 4px;
+    transition: background 0.1s;
+}
+
+.folder-item:hover {
+    background: rgba(40, 80, 160, 0.12);
+}
+
+/* ===== 播放器卡片 ===== */
+.now-playing-card {
+    background: linear-gradient(135deg, rgba(15, 30, 60, 0.8), rgba(10, 20, 48, 0.6));
+    border: 1px solid rgba(60, 120, 200, 0.15);
+    border-radius: 10px;
+    color: #b8d4ff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.song-title {
+    color: #f0f4ff;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.song-artist {
+    color: #88bbee;
+}
+
+/* ===== 播放控制按钮 — XP 玻璃质感 ===== */
+.audio-controls button {
+    background: linear-gradient(180deg, #2a4a7a, #1a2a5a);
+    color: #d0e4ff;
+    border: 1px solid rgba(100, 160, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transition: all 0.12s;
+    width: 30px;
+    height: 30px;
+}
+
+.audio-controls button:hover {
+    background: linear-gradient(180deg, #3a5a8a, #2a3a6a);
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(60, 120, 200, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.play-big {
+    background: linear-gradient(180deg, #ffd700, #e6b800) !important;
+    color: #1a2a4a !important;
+    width: 36px !important;
+    height: 36px !important;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+    border: none !important;
+}
+
+/* ===== 进度条 ===== */
+#progressBar {
+    background: transparent;
+}
+
+#progressBar::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #ffd700 0%, #ffd700 var(--pct,0%), rgba(60, 120, 200, 0.2) var(--pct,0%), rgba(60, 120, 200, 0.2) 100%);
+}
+
+#progressBar::-webkit-slider-thumb {
+    background: #ffd700;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.volume-box input::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #ffd700 0%, #ffd700 var(--vpct,50%), rgba(60, 120, 200, 0.15) var(--vpct,50%), rgba(60, 120, 200, 0.15) 100%);
+}
+
+.volume-box input::-webkit-slider-thumb {
+    background: #ffd700;
+}
+
+/* ===== 歌词 ===== */
+.lyrics-container {
+    background: rgba(8, 16, 40, 0.6);
+}
+
+.lyrics-scroll-wrap {
+    background: transparent;
+}
+
+.lyrics-box {
+    color: #d0e4ff;
+}
+
+.lyrics-line {
+    color: #6a8aaa;
+    transition: all 0.15s;
+}
+
+.lyrics-line:hover {
+    background: rgba(40, 80, 160, 0.1);
+    color: #b8d4ff;
+}
+
+.lyrics-line.active {
+    color: #ffd700;
+    font-weight: bold;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
+}
+
+.lyrics-container .font-control {
+    color: #b8d4ff;
+}
+
+.effect-bar {
+    background: rgba(15, 30, 60, 0.7);
+    border: 1px solid rgba(60, 120, 200, 0.15);
+    color: #b8d4ff;
+    backdrop-filter: blur(4px);
+}
+
+.effect-bar select {
+    background: rgba(20, 40, 80, 0.7);
+    color: #b8d4ff;
+    border: 1px solid rgba(60, 120, 200, 0.2);
+}
+
+/* ===== 文件夹视图 ===== */
+.folder-navigation-bar {
+    border-bottom: 1px solid rgba(60, 120, 200, 0.15);
+}
+
+.folder-path-indicator { color: #6a9acc; }
+.back-item { color: #88bbee; }
+.back-item:hover { background: rgba(40, 80, 160, 0.12); }
+.clear-cache-btn { color: #6a9acc; }
+.clear-cache-btn:hover { background: rgba(40, 80, 160, 0.12); }
+.add-source-btn { color: #88bbee; }
+.folder-icon-wrap { color: #ffd700; text-shadow: 0 0 6px rgba(255, 215, 0, 0.2); }
+
+.source-divider-line { background: rgba(60, 120, 200, 0.12); }
+.source-divider-label { color: #6a9acc; background: rgba(20, 40, 80, 0.2); }
+.source-name { color: #b8d4ff; }
+.source-date-display { color: #4a7a9a; }
+.source-divider-delete { color: #ff6b6b; }
+
+.pagination-bar { border-top: 1px solid rgba(60, 120, 200, 0.12); }
+.page-btn { border: 1px solid rgba(60, 120, 200, 0.15); color: #6a9acc; background: transparent; }
+.page-btn:hover:not(:disabled) { background: rgba(40, 80, 160, 0.12); color: #b8d4ff; }
+.page-btn:disabled { opacity: 0.25; }
+.page-info { color: #4a7a9a; }
+.page-size-select { background: rgba(15, 30, 60, 0.6); border: 1px solid rgba(60, 120, 200, 0.15); color: #6a9acc; }
+.song-index { color: #4a6a8a; }
+.song-duration { color: #4a6a8a; }
+.empty-list { color: #4a7a9a; }
+
+/* ===== 弹框 ===== */
+.add-source-overlay { background: rgba(5, 10, 30, 0.75); }
+.add-source-dialog { background: linear-gradient(180deg, #12204a, #0d1a3a); border: 1px solid rgba(60, 120, 200, 0.2); color: #d0e4ff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); }
+.dialog-title { color: #ffd700; border-bottom: 1px solid rgba(60, 120, 200, 0.15); }
+.dialog-body label { color: #6a9acc; }
+.dialog-body input { background: rgba(10, 20, 48, 0.8); border: 1px solid rgba(60, 120, 200, 0.2); color: #d0e4ff; border-radius: 4px; }
+.dialog-hint { color: #4a7a9a; }
+.dialog-btn.cancel { background: rgba(20, 40, 80, 0.6); color: #6a9acc; border: 1px solid rgba(60, 120, 200, 0.15); border-radius: 4px; }
+.dialog-btn.confirm { background: linear-gradient(180deg, #ffd700, #e6b800); color: #1a2a4a; border: none; border-radius: 4px; box-shadow: 0 1px 4px rgba(255, 215, 0, 0.3); }
+
+/* ===== 滚动条 ===== */
+::-webkit-scrollbar-track { background: rgba(10, 20, 48, 0.4); }
+::-webkit-scrollbar-thumb { background: rgba(60, 120, 200, 0.25); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(60, 120, 200, 0.4); }
+
+.folder-name-scroll { color: #b8d4ff; }
+
+:root { --progress-fill: #ffd700; --progress-buffer: rgba(255,215,0,0.25); --progress-bg: rgba(0,0,0,0.25); }

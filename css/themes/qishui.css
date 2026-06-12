@@ -1,0 +1,72 @@
+/* ========== 汽水音乐风格（明亮活力） ========== */
+body { background: #f0f4f8; }
+.ttplayer-app { background: #fff; }
+.logo { color: #ff6b6b; }
+.theme-select { background: #f0f0f0; color: #333; }
+.theme-select option { background: #fff; color: #333; }
+.win-btn { color: #888; }
+.win-btn:hover { background: #f0f0f0; }
+.playlist-panel { background: #fafafa; }
+.view-mode-btn { color: #5a6a7a; }
+.view-mode-btn.active { background: #ff6b6b; color: #fff; }
+.search-area { background: #f0f0f0; border: 1px solid #e8e8e8; }
+.search-area input { color: #333; }
+.list-container { background: #fafafa; }
+.song-item { color: #333; }
+.song-item:hover { background: #fff5f5; }
+.song-item.active { background: #fff5f5; border-left: 2px solid #ff6b6b; }
+.artist-text { color: #999; }
+.song-item:hover .artist-text { color: #666; }
+.song-item.active .artist-text { color: #ff6b6b; }
+.song-index { color: #ccc; }
+.song-duration { color: #ccc; }
+.lyrics-container .font-control { color: #4a5a6a; }
+.now-playing-card { background: #fff; color: #333; }
+.song-title { color: #1a1a2a; }
+.song-artist { color: #999; }
+.audio-controls button { background: #f5f5f5; color: #555; border: 1px solid #eee; }
+.play-big { background: #ff6b6b !important; color: #fff !important; }
+#progressBar { background: #eee; }
+#progressBar::-webkit-slider-thumb { background: #ff6b6b; }
+.volume-box input::-webkit-slider-thumb { background: #ff6b6b; }
+.lyrics-container { background: #fafafa; }
+.lyrics-box { color: #333; }
+.lyrics-line { color: #999; }
+.lyrics-line:hover { background: #fff5f5; color: #333; }
+.lyrics-line.active { color: #ff6b6b; font-weight: bold; }
+.effect-bar { background: #f5f5f5; border: 1px solid #eee; color: #888; }
+.folder-navigation-bar { border-bottom: 1px solid #eee; }
+.folder-path-indicator { color: #999; }
+.back-item { color: #ff6b6b; }
+.back-item:hover { background: #f5f5f5; }
+.clear-cache-btn { color: #999; }
+.clear-cache-btn:hover { background: #f5f5f5; }
+.add-source-btn { color: #ff6b6b; }
+.folder-grid-wrapper { background: transparent; }
+.folder-icon-wrap { color: #ffd93d; }
+.source-divider-line { background: #eee; }
+.source-divider-label { color: #999; background: #f5f5f5; }
+.source-name { color: #666; }
+.source-date-display { color: #bbb; }
+.source-divider-delete { color: #e74c3c; }
+.pagination-bar { border-top: 1px solid #eee; }
+.page-btn { border: 1px solid #eee; color: #999; }
+.page-btn:hover:not(:disabled) { background: #f5f5f5; color: #555; }
+.page-info { color: #bbb; }
+.page-size-select { background: #fff; border: 1px solid #eee; color: #666; }
+.empty-list { color: #999; }
+.empty-list i { opacity: 0.3; }
+.add-source-overlay { background: rgba(0,0,0,0.4); }
+.add-source-dialog { background: #fff; border: 1px solid #eee; color: #333; }
+.dialog-title { color: #ff6b6b; }
+.dialog-body label { color: #666; }
+.dialog-body input { background: #fafafa; border: 1px solid #eee; color: #333; }
+.dialog-hint { color: #999; }
+.dialog-btn.cancel { background: #f5f5f5; color: #666; }
+.dialog-btn.confirm { background: #ff6b6b; color: #fff; }
+::-webkit-scrollbar-track { background: #f5f5f5; }
+::-webkit-scrollbar-thumb { background: #ddd; }
+.folder-name-scroll { color: #555; }
+.folder-item.grid-box .folder-name-scroll { color: #555; }
+:root { --progress-fill: #ff6b6b; --progress-buffer: rgba(255,107,107,0.25); --progress-bg: rgba(0,0,0,0.25); }
+

@@ -1,0 +1,209 @@
+/* ========== Windows XP 风格 · Luna 蓝色 ========== */
+/* XP 经典蓝：渐变标题栏 + 橄榄绿开始按钮色 + 银灰面板 */
+
+body {
+    background: #3a6ea5;
+}
+
+.ttplayer-app {
+    background: linear-gradient(180deg, #ecf0f5 0%, #d4dce8 40%, #c8d4e0 100%);
+    border: 1px solid #3a6ea5;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.top-bar {
+    background: linear-gradient(180deg, #0a5ca8 0%, #1a7ad0 15%, #0a5ca8 50%, #084a8a 100%);
+    border-bottom: none;
+    min-height: 26px;
+}
+
+.logo {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.theme-select {
+    background: #e8ecf4;
+    color: #1a3a5a;
+    border: 1px solid #7a9aba;
+    border-radius: 3px;
+    font-size: 0.6rem;
+}
+
+.theme-select option { background: #ffffff; color: #1a3a5a; }
+
+.style-label { color: #c0d8f0; opacity: 0.8; }
+
+.clear-cache-title-btn { color: #c0d8f0; opacity: 0.6; }
+.clear-cache-title-btn:hover { opacity: 1; color: #ff6666; background: rgba(255,255,255,0.1); }
+
+.win-btn { color: #c0d8f0; opacity: 0.7; }
+.win-btn:hover { background: rgba(255,255,255,0.15); color: #ffffff; opacity: 1; }
+
+.playlist-panel {
+    background: #ecf0f5;
+    border-right: 1px solid #b8c8d8;
+}
+
+.playlist-header {
+    border-bottom: 1px solid #b8c8d8;
+    padding: 6px 8px;
+}
+
+.view-mode-btn {
+    color: #1a3a5a;
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.62rem;
+}
+
+.view-mode-btn:hover {
+    border-color: #7a9aba;
+    background: rgba(255,255,255,0.5);
+}
+
+.view-mode-btn.active {
+    background: linear-gradient(180deg, #f0f4fa, #d8e4f0);
+    color: #0a3a6a;
+    border-color: #7a9aba;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.fullscreen-btn { color: #5a7a9a; opacity: 0.5; }
+.fullscreen-btn:hover { color: #1a3a5a; opacity: 1; background: rgba(0,0,0,0.04); }
+
+.search-area {
+    background: #ffffff;
+    border: 1px solid #b8c8d8;
+    border-radius: 3px;
+}
+
+.search-area input { color: #1a2a3a; }
+.search-area input::placeholder { color: #7a9aba; opacity: 0.7; }
+
+.list-container { background: transparent; }
+
+.song-item {
+    color: #1a2a3a;
+    border-bottom: 1px solid rgba(120,140,180,0.12);
+    padding: 3px 4px;
+}
+
+.song-item:hover { background: rgba(0,100,200,0.06); }
+.song-item.active { background: rgba(0,100,200,0.1); border-left: 2px solid #0a5ca8; }
+.artist-text { color: #4a6a8a; }
+.song-item:hover .artist-text { color: #1a4a7a; }
+.song-item.active .artist-text { color: #0a5ca8; }
+.song-index, .song-duration { color: #6a8aaa; }
+
+.folder-item { color: #1a2a3a; }
+.folder-item:hover { background: rgba(0,100,200,0.06); }
+
+.now-playing-card {
+    background: linear-gradient(135deg, #f0f4fa, #e4ecf4);
+    border: 1px solid #b8c8d8;
+    border-radius: 6px;
+    color: #1a3a5a;
+    box-shadow: inset 0 1px 0 #ffffff;
+}
+
+.song-title { color: #0a3a6a; font-weight: bold; }
+.song-artist { color: #4a7aaa; }
+
+.audio-controls button {
+    background: linear-gradient(180deg, #e8eef4, #c8d4e0);
+    color: #1a3a5a;
+    border: 1px solid #7a9aba;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0 1px 0 #ffffff;
+    width: 28px;
+    height: 28px;
+}
+
+.audio-controls button:hover {
+    background: linear-gradient(180deg, #f0f4fa, #d8e4f0);
+    border-color: #3a7aba;
+}
+
+.play-big {
+    background: linear-gradient(180deg, #5a9a3a, #3a7a2a) !important;
+    color: #ffffff !important;
+    width: 34px !important;
+    height: 34px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2) !important;
+    border: 1px solid #2a5a1a !important;
+    border-radius: 4px !important;
+}
+
+#progressBar::-webkit-slider-runnable-track {
+    height: 6px;
+    background: linear-gradient(to right, #5a9a3a 0%, #5a9a3a var(--pct,0%), #c8d4e0 var(--pct,0%), #c8d4e0 100%);
+    border-radius: 3px;
+    border: 1px solid #a0b8c8;
+}
+#progressBar::-webkit-slider-thumb { background: #3a7a2a; width: 14px; height: 14px; border-radius: 3px; margin-top: -5px; }
+
+.volume-box input::-webkit-slider-runnable-track {
+    height: 6px;
+    background: linear-gradient(to right, #5a9a3a 0%, #5a9a3a var(--vpct,50%), #c8d4e0 var(--vpct,50%), #c8d4e0 100%);
+    border-radius: 3px;
+    border: 1px solid #a0b8c8;
+}
+.volume-box input::-webkit-slider-thumb { background: #3a7a2a; width: 14px; height: 14px; border-radius: 3px; margin-top: -5px; }
+
+.lyrics-container { background: rgba(200,212,224,0.4); }
+.lyrics-box { color: #1a2a3a; }
+.lyrics-line { color: #4a6a8a; }
+.lyrics-line:hover { background: rgba(0,100,200,0.04); color: #1a3a5a; }
+.lyrics-line.active { color: #0a5ca8; font-weight: bold; text-shadow: 0 0 6px rgba(0,100,200,0.15); }
+.lyrics-container .font-control { color: #1a3a5a; }
+
+.effect-bar { background: rgba(200,212,224,0.5); border: 1px solid #b8c8d8; color: #1a3a5a; }
+.effect-bar select { background: #e8ecf4; color: #1a3a5a; border: 1px solid #7a9aba; }
+
+.folder-navigation-bar { border-bottom: 1px solid #b8c8d8; }
+.folder-path-indicator { color: #4a6a8a; }
+.back-item { color: #0a5ca8; }
+.back-item:hover { background: rgba(0,100,200,0.06); }
+.clear-cache-btn { color: #4a6a8a; }
+.clear-cache-btn:hover { background: rgba(0,100,200,0.06); }
+.add-source-btn { color: #0a5ca8; }
+.folder-icon-wrap { color: #c8a040; }
+
+.source-divider-line { background: rgba(120,140,180,0.15); }
+.source-divider-label { color: #4a6a8a; background: rgba(120,140,180,0.06); }
+.source-name { color: #1a3a5a; }
+.source-date-display { color: #6a8aaa; }
+.source-divider-delete { color: #c0392b; }
+
+.pagination-bar { border-top: 1px solid #b8c8d8; }
+.page-btn { border: 1px solid #a0b8c8; color: #4a6a8a; background: #ecf0f5; }
+.page-btn:hover:not(:disabled) { background: #d8e4f0; color: #1a3a5a; }
+.page-btn:disabled { opacity: 0.3; }
+.page-info { color: #6a8aaa; }
+.page-size-select { background: #ecf0f5; border: 1px solid #a0b8c8; color: #4a6a8a; }
+
+.song-index { color: #6a8aaa; }
+.song-duration { color: #6a8aaa; }
+.empty-list { color: #6a8aaa; }
+
+.add-source-overlay { background: rgba(0,0,0,0.4); }
+.add-source-dialog { background: #ecf0f5; border: 1px solid #7a9aba; color: #1a2a3a; border-radius: 6px; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+.dialog-title { color: #0a3a6a; border-bottom: 1px solid #b8c8d8; }
+.dialog-body label { color: #4a6a8a; }
+.dialog-body input { background: #ffffff; border: 1px solid #a0b8c8; color: #1a2a3a; }
+.dialog-hint { color: #6a8aaa; }
+.dialog-btn.cancel { background: #e0e8f0; color: #1a3a5a; border: 1px solid #7a9aba; border-radius: 3px; }
+.dialog-btn.confirm { background: linear-gradient(180deg, #0a5ca8, #084a8a); color: #fff; border: 1px solid #0a3a6a; border-radius: 3px; }
+
+::-webkit-scrollbar-track { background: #d4dce8; }
+::-webkit-scrollbar-thumb { background: #7a9aba; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3a6a9a; }
+
+.folder-name-scroll { color: #1a3a5a; }
+:root { --progress-fill: #5a9a3a; --progress-buffer: rgba(90,154,58,0.25); --progress-bg: rgba(0,0,0,0.25); }

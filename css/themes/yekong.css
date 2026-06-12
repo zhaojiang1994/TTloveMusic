@@ -1,0 +1,63 @@
+/* ========== 夜空 ========== */
+body { background: #0a141e; }
+.ttplayer-app { background: linear-gradient(180deg, #131517, #0e1a2e); }
+.logo { color: #56b0e9; }
+.theme-select { background: #1b252f; color: #8a9aaa; }
+.theme-select option { background: #1b252f; color:#ccc; }
+.win-btn { color: #5a7a8a; } .win-btn:hover { background: #1a2a3a; }
+.playlist-panel { background: #131517; }
+.view-mode-btn { color: #98b8c8; }
+.view-mode-btn.active { background: #0078d4; color: #fff; }
+.search-area { background: #1b252f; border: 1px solid #2a3a4a; }
+.search-area input { color: #ccc; }
+.list-container { background: #131517; }
+.song-item { color: #ccc; } .song-item:hover { background: #1b252f; }
+.song-item.active { background: #1b252f; border-left: 2px solid #0078d4; }
+.artist-text { color: #728897; }
+.song-item:hover .artist-text { color: #8a9aaa; }
+.song-item.active .artist-text { color: #56b0e9; }
+.song-index { color: #4a5a6a; } .song-duration { color: #4a5a6a; }
+.lyrics-container .font-control { color: #98b8c8; }
+.now-playing-card { background: #1b252f; color: #ccc; }
+.song-title { color: #e8e8e8; } .song-artist { color: #7b7d7f; }
+.audio-controls button { background: #213952; color: #ccc; border: 1px solid #2a4a5a; }
+.play-big { background: #0078d4 !important; color: #fff !important; }
+#progressBar { background: #2a3a4a; }
+#progressBar::-webkit-slider-thumb { background: #56b0e9; }
+.volume-box input::-webkit-slider-thumb { background: #56b0e9; }
+.lyrics-container { background: #131517; }
+.lyrics-box { color: #e8e8e8; } .lyrics-line { color: #9aa8b5; }
+.lyrics-line:hover { background: #1b252f; color: #e8e8e8; }
+.lyrics-line.active { color: #56b0e9; font-weight: bold; }
+.effect-bar { background: #1b252f; border: 1px solid #2a3a4a; color: #728897; }
+.effect-bar select { background: #213952; color: #8a9aaa; border: 1px solid #2a4a5a; }
+.folder-navigation-bar { border-bottom: 1px solid #2a3a4a; }
+.folder-path-indicator { color: #728897; }
+.back-item { color: #56b0e9; } .back-item:hover { background: #1b252f; }
+.clear-cache-btn { color: #728897; } .clear-cache-btn:hover { background: #1b252f; }
+.add-source-btn { color: #56b0e9; }
+.folder-grid-wrapper { background: transparent; }
+.folder-icon-wrap { color: #56b0e9; }
+.source-divider-line { background: #2a3a4a; }
+.source-divider-label { color: #728897; background: #1b252f; }
+.source-name { color: #8a9aaa; } .source-date-display { color: #4a5a6a; }
+.source-divider-delete { color: #e74c3c; }
+.pagination-bar { border-top: 1px solid #2a3a4a; }
+.page-btn { border: 1px solid #2a3a4a; color: #728897; }
+.page-btn:hover:not(:disabled) { background: #1b252f; color: #ccc; }
+.page-info { color: #4a5a6a; }
+.page-size-select { background: #131517; border: 1px solid #2a3a4a; color: #728897; }
+.empty-list { color: #728897; } .empty-list i { opacity: 0.25; }
+.add-source-overlay { background: rgba(5,10,20,0.7); }
+.add-source-dialog { background: #1b252f; border: 1px solid #2a3a4a; color: #ccc; }
+.dialog-title { color: #56b0e9; } .dialog-body label { color: #728897; }
+.dialog-body input { background: #131517; border: 1px solid #2a3a4a; color: #ccc; }
+.dialog-hint { color: #4a5a6a; }
+.dialog-btn.cancel { background: #213952; color: #728897; }
+.dialog-btn.confirm { background: #0078d4; color: #fff; }
+::-webkit-scrollbar-track { background: #131517; }
+::-webkit-scrollbar-thumb { background: #2a3a4a; }
+.folder-name-scroll { color: #8a9aaa; }
+.folder-item.grid-box .folder-name-scroll { color: #8a9aaa; }
+:root { --progress-fill: #56b0e9; --progress-buffer: rgba(86,176,233,0.25); --progress-bg: rgba(0,0,0,0.25); }
+

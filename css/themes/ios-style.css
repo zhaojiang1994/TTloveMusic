@@ -1,0 +1,225 @@
+/* ========== iOS 风格 ========== */
+/* SF 字体感 + 大圆角 + 毛玻璃 + 纯白/深灰双色调 */
+
+body {
+    background: #1c1c1e;
+}
+
+.ttplayer-app {
+    background: rgba(240, 240, 245, 0.92);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border-radius: 14px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+    border: 0.5px solid rgba(255,255,255,0.3);
+}
+
+.top-bar {
+    background: rgba(255,255,255,0.3);
+    border-bottom: 0.5px solid rgba(0,0,0,0.05);
+    min-height: 28px;
+    padding: 2px 14px;
+}
+
+.logo {
+    color: #1c1c1e;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.theme-select {
+    background: rgba(120,120,128,0.12);
+    color: #1c1c1e;
+    border: none;
+    border-radius: 6px;
+    font-weight: 400;
+}
+
+.theme-select option { background: #f2f2f7; color: #1c1c1e; }
+
+.style-label { color: #8e8e93; opacity: 0.6; }
+
+.clear-cache-title-btn { color: #8e8e93; opacity: 0.4; }
+.clear-cache-title-btn:hover { opacity: 1; color: #ff3b30; background: rgba(255,59,48,0.08); border-radius: 6px; }
+
+.win-btn { color: #8e8e93; opacity: 0.5; border-radius: 6px; }
+.win-btn:hover { opacity: 1; background: rgba(120,120,128,0.1); color: #1c1c1e; }
+
+.playlist-panel {
+    background: rgba(255,255,255,0.2);
+    border-right: 0.5px solid rgba(0,0,0,0.04);
+}
+
+.playlist-header {
+    border-bottom: 0.5px solid rgba(0,0,0,0.04);
+    padding: 8px 12px;
+}
+
+.view-mode-btn {
+    color: #3a3a3c;
+    background: transparent;
+    border: none;
+    padding: 4px 14px;
+    border-radius: 8px;
+    font-size: 0.6rem;
+    font-weight: 500;
+}
+
+.view-mode-btn:hover { background: rgba(120,120,128,0.08); }
+
+.view-mode-btn.active {
+    background: rgba(255,255,255,0.7);
+    color: #007aff;
+    box-shadow: 0 0.5px 2px rgba(0,0,0,0.04);
+}
+
+.fullscreen-btn { color: #8e8e93; opacity: 0.4; }
+.fullscreen-btn:hover { opacity: 1; color: #007aff; background: rgba(0,122,255,0.06); border-radius: 6px; }
+
+.search-area {
+    background: rgba(120,120,128,0.08);
+    border: none;
+    border-radius: 10px;
+}
+
+.search-area input { color: #1c1c1e; }
+.search-area input::placeholder { color: #8e8e93; opacity: 0.7; }
+
+.list-container { background: transparent; }
+
+.song-item {
+    color: #1c1c1e;
+    border-bottom: 0.5px solid rgba(0,0,0,0.03);
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin: 1px 4px;
+}
+
+.song-item:hover { background: rgba(0,122,255,0.04); }
+.song-item.active { background: rgba(0,122,255,0.08); border-left: 3px solid #007aff; }
+.artist-text { color: #8e8e93; }
+.song-item:hover .artist-text { color: #3a3a3c; }
+.song-item.active .artist-text { color: #007aff; }
+.song-index, .song-duration { color: #aeaeb2; }
+
+.folder-item { color: #1c1c1e; border-radius: 8px; }
+.folder-item:hover { background: rgba(0,122,255,0.04); }
+
+.now-playing-card {
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 0.5px solid rgba(255,255,255,0.5);
+    border-radius: 12px;
+    color: #1c1c1e;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.song-title { color: #1c1c1e; font-weight: 600; }
+.song-artist { color: #8e8e93; }
+
+.audio-controls button {
+    background: rgba(120,120,128,0.1);
+    color: #1c1c1e;
+    border: none;
+    border-radius: 50%;
+    box-shadow: none;
+    width: 30px;
+    height: 30px;
+}
+
+.audio-controls button:hover {
+    background: rgba(120,120,128,0.18);
+    transform: scale(1.05);
+}
+
+.play-big {
+    background: linear-gradient(135deg, #007aff, #0055dd) !important;
+    color: #ffffff !important;
+    width: 38px !important;
+    height: 38px !important;
+    box-shadow: 0 2px 10px rgba(0,122,255,0.25) !important;
+    border: none !important;
+}
+
+#progressBar::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(to right, #007aff 0%, #007aff var(--pct,0%), rgba(120,120,128,0.15) var(--pct,0%), rgba(120,120,128,0.15) 100%);
+}
+
+#progressBar::-webkit-slider-thumb {
+    background: #007aff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0,122,255,0.3);
+    margin-top: -6px;
+}
+
+.volume-box input::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(to right, #007aff 0%, #007aff var(--vpct,50%), rgba(120,120,128,0.15) var(--vpct,50%), rgba(120,120,128,0.15) 100%);
+}
+
+.volume-box input::-webkit-slider-thumb {
+    background: #007aff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+.lyrics-container { background: rgba(255,255,255,0.15); }
+.lyrics-box { color: #1c1c1e; }
+.lyrics-line { color: #8e8e93; }
+.lyrics-line:hover { background: rgba(0,122,255,0.03); color: #3a3a3c; border-radius: 6px; }
+.lyrics-line.active { color: #007aff; font-weight: 600; text-shadow: 0 0 10px rgba(0,122,255,0.15); }
+.lyrics-container .font-control { color: #3a3a3c; }
+
+.effect-bar { background: rgba(255,255,255,0.5); border: 0.5px solid rgba(0,0,0,0.04); color: #3a3a3c; backdrop-filter: blur(12px); border-radius: 8px; }
+.effect-bar select { background: rgba(120,120,128,0.1); color: #1c1c1e; border: none; border-radius: 6px; }
+
+.folder-navigation-bar { border-bottom: 0.5px solid rgba(0,0,0,0.04); }
+.folder-path-indicator { color: #8e8e93; }
+.back-item { color: #007aff; }
+.back-item:hover { background: rgba(0,122,255,0.04); border-radius: 8px; }
+.clear-cache-btn { color: #8e8e93; }
+.clear-cache-btn:hover { background: rgba(0,122,255,0.04); border-radius: 8px; }
+.add-source-btn { color: #007aff; }
+.folder-icon-wrap { color: #ff9500; }
+
+.source-divider-line { background: rgba(0,0,0,0.04); }
+.source-divider-label { color: #8e8e93; background: rgba(0,0,0,0.02); }
+.source-name { color: #1c1c1e; }
+.source-date-display { color: #aeaeb2; }
+.source-divider-delete { color: #ff3b30; }
+
+.pagination-bar { border-top: 0.5px solid rgba(0,0,0,0.04); }
+.page-btn { border: 0.5px solid rgba(0,0,0,0.06); color: #8e8e93; background: rgba(255,255,255,0.3); border-radius: 6px; }
+.page-btn:hover:not(:disabled) { background: rgba(255,255,255,0.6); color: #1c1c1e; }
+.page-btn:disabled { opacity: 0.3; }
+.page-info { color: #aeaeb2; }
+.page-size-select { background: rgba(255,255,255,0.3); border: 0.5px solid rgba(0,0,0,0.06); color: #8e8e93; border-radius: 6px; }
+
+.song-index { color: #aeaeb2; }
+.song-duration { color: #aeaeb2; }
+.empty-list { color: #aeaeb2; }
+
+.add-source-overlay { background: rgba(0,0,0,0.2); backdrop-filter: blur(8px); }
+.add-source-dialog { background: rgba(240,240,245,0.9); backdrop-filter: blur(40px); border: 0.5px solid rgba(255,255,255,0.5); color: #1c1c1e; border-radius: 14px; box-shadow: 0 8px 40px rgba(0,0,0,0.12); }
+.dialog-title { color: #1c1c1e; border-bottom: 0.5px solid rgba(0,0,0,0.04); font-weight: 600; }
+.dialog-body label { color: #8e8e93; }
+.dialog-body input { background: rgba(255,255,255,0.5); border: 0.5px solid rgba(0,0,0,0.06); color: #1c1c1e; border-radius: 10px; }
+.dialog-hint { color: #aeaeb2; }
+.dialog-btn.cancel { background: rgba(120,120,128,0.08); color: #1c1c1e; border: none; border-radius: 10px; }
+.dialog-btn.confirm { background: #007aff; color: #fff; border: none; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,122,255,0.2); }
+
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(120,120,128,0.15); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(120,120,128,0.25); }
+
+.folder-name-scroll { color: #1c1c1e; }
+:root { --progress-fill: #007aff; --progress-buffer: rgba(0,122,255,0.25); --progress-bg: rgba(0,0,0,0.25); }

@@ -1,0 +1,72 @@
+/* ========== 网易云音乐风�?========== */
+body { background: #1a1a2e; }
+.ttplayer-app { background: linear-gradient(180deg, #1f1f3a, #2a2a4a); }
+.logo { color: #e74c3c; }
+.theme-select { background: #2a2a4a; color: #ccc; }
+.theme-select option { background: #1f1f3a; color: #ccc; }
+.win-btn { color: #888; }
+.win-btn:hover { background: #3a3a5a; }
+.playlist-panel { background: #1f1f3a; }
+.view-mode-btn { color: #aaa; }
+.view-mode-btn.active { background: #e74c3c; color: #fff; }
+.search-area { background: #2a2a4a; border: 1px solid #3a3a5a; }
+.search-area input { color: #ddd; }
+.list-container { background: #1f1f3a; }
+.song-item { color: #ddd; }
+.song-item:hover { background: #2a2a4a; }
+.song-item.active { background: #2a2a4a; border-left: 2px solid #e74c3c; }
+.artist-text { color: #888; }
+.song-item:hover .artist-text { color: #aaa; }
+.song-item.active .artist-text { color: #e74c3c; }
+.song-index { color: #555; }
+.song-duration { color: #555; }
+.lyrics-container .font-control { color: #c8c8e0; }
+.now-playing-card { background: #2a2a4a; color: #ddd; }
+.song-title { color: #fff; }
+.song-artist { color: #999; }
+.audio-controls button { background: #3a3a5a; color: #ddd; border: 1px solid #4a4a6a; }
+.play-big { background: #e74c3c !important; color: #fff !important; }
+#progressBar { background: #3a3a5a; }
+#progressBar::-webkit-slider-thumb { background: #e74c3c; }
+.volume-box input::-webkit-slider-thumb { background: #e74c3c; }
+.lyrics-container { background: #1f1f3a; }
+.lyrics-box { color: #ddd; }
+.lyrics-line { color: #888; }
+.lyrics-line:hover { background: #2a2a4a; color: #fff; }
+.lyrics-line.active { color: #e74c3c; font-weight: bold; }
+.effect-bar { background: #2a2a4a; border: 1px solid #3a3a5a; color: #aaa; }
+.folder-navigation-bar { border-bottom: 1px solid #3a3a5a; }
+.folder-path-indicator { color: #888; }
+.back-item { color: #e74c3c; }
+.back-item:hover { background: #2a2a4a; }
+.clear-cache-btn { color: #888; }
+.clear-cache-btn:hover { background: #2a2a4a; }
+.add-source-btn { color: #e74c3c; }
+.folder-grid-wrapper { background: transparent; }
+.folder-icon-wrap { color: #e7a84c; }
+.source-divider-line { background: #3a3a5a; }
+.source-divider-label { color: #888; background: #2a2a4a; }
+.source-name { color: #bbb; }
+.source-date-display { color: #666; }
+.source-divider-delete { color: #e74c3c; }
+.pagination-bar { border-top: 1px solid #3a3a5a; }
+.page-btn { border: 1px solid #3a3a5a; color: #666; }
+.page-btn:hover:not(:disabled) { background: #2a2a4a; color: #aaa; }
+.page-info { color: #555; }
+.page-size-select { background: #1f1f3a; border: 1px solid #3a3a5a; color: #888; }
+.empty-list { color: #666; }
+.empty-list i { opacity: 0.25; }
+.add-source-overlay { background: rgba(0,0,0,0.6); }
+.add-source-dialog { background: #2a2a4a; border: 1px solid #3a3a5a; color: #ddd; }
+.dialog-title { color: #e74c3c; }
+.dialog-body label { color: #888; }
+.dialog-body input { background: #1f1f3a; border: 1px solid #3a3a5a; color: #ddd; }
+.dialog-hint { color: #666; }
+.dialog-btn.cancel { background: #3a3a5a; color: #888; }
+.dialog-btn.confirm { background: #e74c3c; color: #fff; }
+::-webkit-scrollbar-track { background: #1f1f3a; }
+::-webkit-scrollbar-thumb { background: #3a3a5a; }
+.folder-name-scroll { color: #bbb; }
+.folder-item.grid-box .folder-name-scroll { color: #bbb; }
+:root { --progress-fill: #e74c3c; --progress-buffer: rgba(231,76,60,0.25); --progress-bg: rgba(0,0,0,0.25); }
+

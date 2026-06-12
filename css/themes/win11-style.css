@@ -1,0 +1,133 @@
+/* ========== Windows 11 Fluent Design System ========== */
+:root {
+    --win-bg: #f3f3f3;
+    --win-surface: rgba(255, 255, 255, 0.7);
+    --win-accent: #005fb8;
+    --win-text: #1b1b1b;
+    --win-text-muted: #616161;
+    --win-border: rgba(0, 0, 0, 0.08);
+}
+
+body {
+    background: #d1d1d1; /* 模拟桌面壁纸下的底色 */
+    font-family: "Segoe UI", sans-serif;
+}
+
+.ttplayer-app {
+    background: rgba(243, 243, 243, 0.85); /* Mica 材质底色 */
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* 顶部高光边 */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.top-bar {
+    background: rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid var(--win-border);
+}
+
+.logo { color: var(--win-text); font-weight: 600; }
+
+.theme-select {
+    background: var(--win-surface);
+    color: var(--win-text);
+    border: 1px solid var(--win-border);
+    border-radius: 4px;
+}
+
+.win-btn { color: var(--win-text); }
+.win-btn:hover { background: rgba(0, 0, 0, 0.05); }
+
+.playlist-panel { background: rgba(255, 255, 255, 0.3); border-right: 1px solid var(--win-border); }
+
+.view-mode-btn { color: var(--win-text-muted); }
+.view-mode-btn.active { background: var(--win-surface); color: var(--win-accent); box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+
+.search-area { background: var(--win-surface); border: 1px solid var(--win-border); border-bottom: 2px solid var(--win-accent); }
+
+.song-item { color: var(--win-text); border-radius: 4px; }
+.song-item:hover { background: rgba(0, 0, 0, 0.04); }
+.song-item.active { background: rgba(0, 95, 184, 0.08); border-left: 3px solid var(--win-accent); }
+
+.artist-text { color: var(--win-text-muted); }
+.song-item.active .artist-text { color: var(--win-accent); }
+
+.now-playing-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}
+
+.audio-controls button { background: var(--win-surface); border: 1px solid var(--win-border); }
+.play-big { background: var(--win-accent) !important; color: #fff !important; }
+
+#progressBar::-webkit-slider-runnable-track { background: rgba(0,0,0,0.1); }
+#progressBar::-webkit-slider-thumb { background: var(--win-accent); border: 2px solid #fff; }
+
+.lyrics-container { background: rgba(255, 255, 255, 0.2); }
+.lyrics-line.active { color: var(--win-accent); font-weight: 600; }
+
+.effect-bar { background: var(--win-surface); border: 1px solid var(--win-border); }
+
+.add-source-dialog {
+    background: rgba(243, 243, 243, 0.95);
+    border: 1px solid var(--win-border);
+    border-radius: 8px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-btn.confirm { background: var(--win-accent); color: #fff; }
+
+::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.15); border-radius: 4px; }
+:root { --progress-fill: #005fb8; }
+
+/* ========== 修正：文件夹区域对比度 ========== */
+
+/* 文件夹条目整体容器 */
+.folder-item {
+    color: #1b1b1b; /* 确保文字颜色为深灰，在浅色底上对比度最高 */
+    background: transparent;
+    border-radius: 4px;
+    padding: 6px 8px;
+    transition: background 0.1s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* 悬停状态：增加背景色，让文字在变暗的背景下更清晰 */
+.folder-item:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+/* 文件夹名称文字容器 */
+.folder-name-scroll {
+    color: #1b1b1b; /* 明确指定文字颜色 */
+    font-weight: 500; /* 加粗一点，提升阅读可辨识度 */
+    font-size: 0.9rem;
+}
+
+/* 如果有栅格布局的文件夹 */
+.folder-item.grid-box .folder-name-scroll {
+    color: #1b1b1b;
+    margin-top: 4px;
+}
+
+/* 文件夹图标图标颜色 - 使用系统级强调色，使其从文字中跳出来 */
+.folder-icon-wrap {
+    color: #005fb8; /* 使用 Windows 11 强调色，增加视觉锚点 */
+    margin-right: 10px;
+    opacity: 0.9;
+}
+
+/* 选中状态（如果该项被选中） */
+.folder-item.active {
+    background: rgba(0, 95, 184, 0.1) !important;
+    color: #005fb8;
+}
+
+.folder-item.active .folder-name-scroll {
+    color: #005fb8;
+    font-weight: 600;
+}

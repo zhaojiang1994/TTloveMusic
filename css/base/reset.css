@@ -1,0 +1,28 @@
+/* ========== 重置样式 ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'PingFang SC', Roboto, 'Microsoft YaHei', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+    background: #0a0e1a;
+}
+
+/* Electron下body铺满（去掉背景色） */
+body.electron-body {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: transparent !important;
+}

@@ -1,0 +1,208 @@
+/* ========== 天天爱听 · 暗夜玻璃 ========== */
+body {
+    background: #000000;
+}
+
+.ttplayer-app {
+    background: #0a0a0e;
+}
+
+.logo {
+    color: #66ccff;
+}
+
+.style-btn {
+    background: #1a1a2a;
+    color: #ffffff; /* 👈 按钮文字提升为纯白，增加可读�?*/
+    border: 1px solid #2a3a5a;
+}
+
+.playlist-panel {
+    background: #0a0a0e;
+    border-right-color: #1a2a3a;
+}
+
+.playlist-header {
+    border-bottom: 1px solid #1a2a3a;
+}
+
+.view-mode-btn {
+    color: #aaccff;
+}
+
+.view-mode-btn.active {
+    background: #2a3a5a;
+    color: #ffffff;
+}
+
+.search-area {
+    background: #0a0a0e;
+    border: 1px solid #2a3a5a;
+}
+
+.search-area input {
+    color: #ffffff; /* 👈 输入框文字提亮至纯白 */
+}
+
+.add-music button {
+    background: #1a1a2a;
+    color: #ffffff; /* 👈 提亮按钮文字 */
+}
+
+.list-container {
+    background: #0a0a0e;
+}
+
+/* --- 歌曲列表：极黑背景下的高反差对比 --- */
+.song-item {
+    color: #ffffff; /* 👈 歌名直接拉到纯白，在纯黑背景下绝不伤�?*/
+}
+
+.song-item:hover {
+    background: #1a2a3a;
+}
+
+.song-item.active {
+    background: #1a2a3a;
+    border-left: 2px solid #66ccff;
+}
+
+.artist-text {
+    color: #88ddff; /* 👈 提升未��中歌手名字的亮�?*/
+}
+
+.song-item:hover .artist-text {
+    color: #ffffff;
+}
+
+.song-item.active .artist-text {
+    color: #66ffcc;
+}
+
+.song-name-display {
+    color: #ffffff; /* 👈 提亮 */
+}
+
+.artist-scroll::-webkit-scrollbar-track {
+    background: #1a2a3a;
+}
+
+.artist-scroll::-webkit-scrollbar-thumb {
+    background: #66ccff;
+}
+
+.folder-item {
+    color: #ffffff; /* 👈 文件夹文字提亮至纯白 */
+}
+
+.folder-item:hover {
+    background: #1a2a3a;
+}
+
+.lyrics-container .font-control {
+    color: #88ddff; /* 👈 顺便把字号大小的提示文字点亮 */
+}
+
+/* --- 当前播放卡片：让进度条两旁的时间在暗夜中亮起�?--- */
+.now-playing-card {
+    background: #0a0a0e;
+    border: 1px solid #1a2a3a;
+    color: #66ccff; /* 👈 核心修改：让继承此处的当前时间与总时间变成清澈����亮的青蓝色，一秒一秒跳动时极其清晰 */
+}
+
+.song-title {
+    color: #ffffff; /* 👈 正在播放的歌名变纯白 */
+}
+
+/* 原版少写�?.song-artist 导致没有继承主题，这里补上它并使其与列表的激活歌手色�?66ffcc）相呼应 */
+.song-artist {
+    color: #66ffcc;
+}
+
+.audio-controls button {
+    background: #1a1a2a;
+    color: #ffffff; /* 👈 播放控制图标全部提亮到纯�?*/
+}
+
+/* 播放按钮大图标优�?*/
+.play-big {
+    background: #66ccff !important; /* 👈 彻底扔掉突兀的橙色，换成冰凌透亮的玻璃蓝，与主题完美融合 */
+    color: #0a0a0e !important;    /* 文字/图标改用深色衬托 */
+}
+
+.lyrics-container {
+    background: #0a0a0e;
+}
+
+/* 不设 background——让 canvas 特效层透出 */
+
+.lyrics-box {
+    color: #ffffff; /* 👈 提亮 */
+}
+
+/* --- 歌词：错落有致的暗夜极光 --- */
+.lyrics-line {
+    color: #88aacc; /* 👈 未唱到的歌词稍微收敛，保持恰到好处的对比度，不喧宾夺�?*/
+}
+
+.lyrics-line:hover {
+    background: #1a2a3a;
+    color: #ffffff;
+}
+
+.lyrics-line.active {
+    color: #66ffcc;
+    font-weight: bold;
+}
+
+.effect-bar {
+    background: #0a0a0e;
+    border: 1px solid #1a2a3a;
+    color: #aaccff;
+}
+
+/* ========== 补充通用选择�?========== */
+.folder-navigation-bar { border-bottom: 1px solid #1a2a3a; }
+.folder-path-indicator { color: #6688aa; }
+.back-item { color: #66ccff; }
+.back-item:hover { background: #1a2a3a; }
+.clear-cache-btn { color: #6699bb; }
+.clear-cache-btn:hover { background: #1a2a3a; }
+.add-source-btn { color: #4da6ff; }
+.folder-grid-wrapper { background: transparent; }
+.folder-icon-wrap { color: #88ccdd; }
+.source-divider-line { background: rgba(150, 200, 255, 0.15); }
+.source-divider-label { color: #8899aa; background: rgba(128, 128, 128, 0.06); }
+.source-name { color: #aabbcc; }
+.source-date-display { color: #556677; }
+.source-divider-delete { color: #e74c3c; }
+.pagination-bar { border-top: 1px solid rgba(100, 150, 200, 0.12); }
+.page-btn { border: 1px solid rgba(100, 150, 200, 0.15); color: rgba(150, 200, 255, 0.4); }
+.page-btn:hover:not(:disabled) { background: rgba(50, 120, 200, 0.15); color: rgba(180, 220, 255, 0.7); }
+.page-btn:disabled { opacity: 0.2; }
+.page-info { color: rgba(100, 150, 200, 0.4); }
+.page-size-select { background: transparent; border: 1px solid rgba(100, 150, 200, 0.15); color: rgba(150, 200, 255, 0.4); }
+.song-index { color: #556677; }
+.song-duration { color: #556677; }
+.empty-list { color: #667788; }
+.empty-list i { opacity: 0.25; }
+.add-source-overlay { background: rgba(0, 0, 0, 0.7); }
+.add-source-dialog { background: #1a1a2a; border: 1px solid #2a3a5a; color: #c0d0e0; }
+.dialog-title { color: #66ccff; }
+.dialog-body label { color: #8899aa; }
+.dialog-body input { background: #0a0a1a; border: 1px solid #2a3a5a; color: #ddeeff; }
+.dialog-hint { color: #556677; }
+.dialog-btn.cancel { background: #1a2a3a; color: #8899aa; }
+.dialog-btn.confirm { background: #4da6ff; color: #fff; }
+::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.03); }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.12); }
+.folder-name-scroll { color: #aabbcc; }
+.theme-select { background: #1a1a2a; color: #aaccff; border: 1px solid #2a3a5a; }
+.theme-select option { background: #0a0a0e; color: #c8ddff; }
+.style-label { color: #66aacc; opacity: 0.6; }
+.clear-cache-title-btn { color: #66aacc; opacity: 0.4; }
+.clear-cache-title-btn:hover { opacity: 1; color: #e74c3c; background: rgba(255,255,255,0.04); }
+.win-btn { color: #66aacc; opacity: 0.5; }
+.win-btn:hover { opacity: 1; background: rgba(255,255,255,0.04); color: #ffffff; }
+:root { --progress-fill: #66ccff; --progress-buffer: rgba(102,204,255,0.25); --progress-bg: rgba(0,0,0,0.25); }
+

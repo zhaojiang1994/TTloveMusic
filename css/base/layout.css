@@ -1,0 +1,89 @@
+/* ========== 布局样式 ========== */
+/* 主容器 - 浏览器模式（固定大小居中） */
+.ttplayer-app {
+    width: 880px;
+    height: 76vh;
+    min-height: 580px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 主容器 - Electron模式（保持宽度，高度填满） */
+.ttplayer-app.electron-mode {
+    width: 100%;
+    height: 100vh;
+    min-height: auto;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* 主布局 */
+.main-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* 播放列表面板 */
+.playlist-panel {
+    width: 256.5px;
+    min-width: 180px;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* 播放器核心区 */
+.player-core {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    overflow: hidden;
+    contain: layout style;
+}
+
+/* 拖拽手柄 - 垂直（左右分区） */
+.divider-handle {
+    flex-shrink: 0;
+    position: relative;
+    cursor: col-resize;
+    width: 4px;
+    background: rgba(128, 128, 128, 0.12);
+    transition: background 0.15s;
+    z-index: 10;
+}
+
+.divider-handle:hover,
+.divider-handle.active {
+    background: rgba(128, 128, 128, 0.3);
+}
+
+.divider-handle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 20px;
+    background: rgba(128, 128, 128, 0.25);
+    border-radius: 1px;
+}
+
+/* 拖拽手柄 - 水平（上下分区） */
+.divider-handle.divider-h {
+    cursor: ns-resize;
+    width: auto;
+    height: 4px;
+}
+
+.divider-handle.divider-h::after {
+    width: 20px;
+    height: 2px;
+}

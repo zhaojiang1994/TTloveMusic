@@ -1,0 +1,72 @@
+/* ========== 咖啡物语 ========== */
+body { background: #1a1008; }
+.ttplayer-app { background: linear-gradient(180deg, #2a1a0e, #1a1008); }
+.logo { color: #c88a4a; }
+.theme-select { background: #2a1a0e; color: #aa8866; }
+.theme-select option { background: #2a1a0e; color: #aa8866; }
+.win-btn { color: #8a7a5a; }
+.win-btn:hover { background: #3a2a1a; }
+.playlist-panel { background: #1a1008; }
+.view-mode-btn { color: #aa8866; }
+.view-mode-btn.active { background: #c88a4a; color: #fff; }
+.search-area { background: #2a1a0e; border: 1px solid #4a3a2a; }
+.search-area input { color: #ddccbb; }
+.list-container { background: #1a1008; }
+.song-item { color: #ddccbb; }
+.song-item:hover { background: #2a1a0e; }
+.song-item.active { background: #2a1a0e; border-left: 2px solid #c88a4a; }
+.artist-text { color: #8a7a5a; }
+.song-item:hover .artist-text { color: #aa8866; }
+.song-item.active .artist-text { color: #ddaa66; }
+.song-index { color: #4a3a2a; }
+.song-duration { color: #4a3a2a; }
+.lyrics-container .font-control { color: #c8b898; }
+.now-playing-card { background: #2a1a0e; color: #ddccbb; }
+.song-title { color: #eeddcc; }
+.song-artist { color: #aa8866; }
+.audio-controls button { background: #3a2a1a; color: #ddccbb; border: 1px solid #5a4a3a; }
+.play-big { background: #b87840 !important; color: #fff !important; }
+#progressBar { background: #3a2a1a; }
+#progressBar::-webkit-slider-thumb { background: #c88a4a; }
+.volume-box input::-webkit-slider-thumb { background: #c88a4a; }
+.lyrics-container { background: #1a1008; }
+.lyrics-box { color: #ddccbb; }
+.lyrics-line { color: #b8a888; }
+.lyrics-line:hover { background: #2a1a0e; color: #eeddcc; }
+.lyrics-line.active { color: #c88a4a; font-weight: bold; }
+.effect-bar { background: #2a1a0e; border: 1px solid #4a3a2a; color: #aa8866; }
+.folder-navigation-bar { border-bottom: 1px solid #4a3a2a; }
+.folder-path-indicator { color: #aa8866; }
+.back-item { color: #c88a4a; }
+.back-item:hover { background: #2a1a0e; }
+.clear-cache-btn { color: #8a7a5a; }
+.clear-cache-btn:hover { background: #2a1a0e; }
+.add-source-btn { color: #c88a4a; }
+.folder-grid-wrapper { background: transparent; }
+.folder-icon-wrap { color: #ddaa66; }
+.source-divider-line { background: #4a3a2a; }
+.source-divider-label { color: #aa8866; background: #2a1a0e; }
+.source-name { color: #ccbbaa; }
+.source-date-display { color: #6a5a4a; }
+.source-divider-delete { color: #e74c3c; }
+.pagination-bar { border-top: 1px solid #4a3a2a; }
+.page-btn { border: 1px solid #4a3a2a; color: #8a7a5a; }
+.page-btn:hover:not(:disabled) { background: #2a1a0e; color: #ddccbb; }
+.page-info { color: #5a4a3a; }
+.page-size-select { background: #1a1008; border: 1px solid #4a3a2a; color: #aa8866; }
+.empty-list { color: #8a7a5a; }
+.empty-list i { opacity: 0.25; }
+.add-source-overlay { background: rgba(0,0,0,0.6); }
+.add-source-dialog { background: #2a1a0e; border: 1px solid #4a3a2a; color: #ddccbb; }
+.dialog-title { color: #c88a4a; }
+.dialog-body label { color: #8a7a5a; }
+.dialog-body input { background: #1a1008; border: 1px solid #4a3a2a; color: #ddccbb; }
+.dialog-hint { color: #6a5a4a; }
+.dialog-btn.cancel { background: #3a2a1a; color: #8a7a5a; }
+.dialog-btn.confirm { background: #b87840; color: #fff; }
+::-webkit-scrollbar-track { background: #1a1008; }
+::-webkit-scrollbar-thumb { background: #4a3a2a; }
+.folder-name-scroll { color: #ccbbaa; }
+.folder-item.grid-box .folder-name-scroll { color: #ccbbaa; }
+:root { --progress-fill: #c88a4a; --progress-buffer: rgba(200,138,74,0.25); --progress-bg: rgba(0,0,0,0.25); }
+

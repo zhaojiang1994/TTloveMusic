@@ -1,0 +1,20 @@
+// 歌词背景特效清单
+window.EFFECT_MANIFEST = [
+    { id: 'themeColor', file: 'fx-themeColor.js', label: '🎨 主题色' },
+    { id: 'plainWhite', file: 'fx-plainWhite.js', label: '⬜ 纯白极简' },
+    { id: 'starField', file: 'fx-starField.js', label: '⭐ 星空穿越' },
+    { id: 'moonlight', file: 'fx-moonlight.js', label: '🌙 月光海岸' },
+    { id: 'galaxy', file: 'fx-galaxy.js', label: '🌌 星河流转' },
+    { id: 'solarSystem', file: 'fx-solarSystem.js', label: '🪐 太阳系' },
+    { id: 'snow', file: 'fx-snow.js', label: '❄️ 冬日雪花' },
+    { id: 'deepSea', file: 'fx-deepSea.js', label: '🌊 深海世界' },
+    { id: 'sakura', file: 'fx-sakura.js', label: '🌸 落樱缤纷' },
+    { id: 'sunny', file: 'fx-sunny.js', label: '🌤️ 暖阳和风' },
+    { id: 'blackHole', file: 'fx-blackHole.js', label: '🔥 鸿蒙黑洞' },
+    { id: 'auroraSilk', file: 'fx-auroraSilk.js', label: '🌀 极光丝绒' },
+    { id: 'quantumMesh', file: 'fx-quantumMesh.js', label: '🌀 量子纠缠场' },
+    { id: 'synthwave_horizon', file: 'synthwave_horizon.js', label: '🌆 赛博朋克霓虹视差' },
+    { id: 'nebula_vortex', file: 'nebula_vortex.js', label: '🌌 星云漩涡' },
+    { id: 'memphis_pop', file: 'memphis_pop.js', label: '🎨 莫兰迪波普几何' },
+    { id: 'pixel_bounce_race', file: 'pixel_bounce_race.js', label: '🌲 静谧森林' },
+];
